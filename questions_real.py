@@ -80,4 +80,77 @@ questions_real = [
         "correct": [1, 2, 3],
         "explanation": "Secure segmentation is used when managing and organizing data in a data center. Threat defense includes a firewall and intrusion prevention system (IPS). Data center visibility is designed to simplify operations and compliance reporting by providing consistent security policy enforcement."
     },
+    {
+        "id": 1006,
+        "type": "checkbox",
+        "question": "What are three characteristics of ASA transparent mode? (Choose three.)",
+        "image": None,
+        "options": [
+            "This mode does not support VPNs, QoS, or DHCP Relay.",
+            "It is the traditional firewall deployment mode.",
+            "This mode is referred to as a \"bump in the wire.\"",
+            "NAT can be implemented between connected networks.",
+            "In this mode the ASA is invisible to an attacker.",
+            "The interfaces of the ASA separate Layer 3 networks and require IP addresses in different subnets."
+        ],
+        "correct": [0, 2, 4],
+        "explanation": "In transparent mode, the ASA acts as a Layer 2 device (bump in the wire), is invisible to attackers, and does not support VPNs, QoS, or DHCP Relay. The traditional firewall deployment mode is routed mode, not transparent mode."
+    },
+    {
+        "id": 1007,
+        "type": "radio",
+        "question": "What is needed to allow specific traffic that is sourced on the outside network of an ASA firewall to reach an internal network?",
+        "image": None,
+        "options": [
+            "ACL",
+            "NAT",
+            "dynamic routing protocols",
+            "outside security zone level 0"
+        ],
+        "correct": [0],
+        "explanation": "In order to explicitly permit traffic from an interface with a lower security level to an interface with a higher security level, an ACL must be configured. By default, traffic will only flow from a higher security level to a lower."
+    },
+    {
+        "id": 1008,
+        "type": "radio",
+        "question": "What will be the result of failed login attempts if the following command is entered into a router?\n\nlogin block-for 150 attempts 4 within 90",
+        "image": None,
+        "options": [
+            "All login attempts will be blocked for 150 seconds if there are 4 failed attempts within 90 seconds.",
+            "All login attempts will be blocked for 90 seconds if there are 4 failed attempts within 150 seconds.",
+            "All login attempts will be blocked for 1.5 hours if there are 4 failed attempts within 150 seconds.",
+            "All login attempts will be blocked for 4 hours if there are 90 failed attempts within 150 seconds."
+        ],
+        "correct": [0],
+        "explanation": "The components of the login block-for 150 attempts 4 within 90 command are as follows:\n- The expression block-for 150 is the time in seconds that logins will be blocked.\n- The expression attempts 4 is the number of failed attempts that will trigger the blocking of login requests.\n- The expression within 90 is the time in seconds in which the 4 failed attempts must occur."
+    },
+    {
+        "id": 1009,
+        "type": "checkbox",
+        "question": "Which two tasks are associated with router hardening? (Choose two.)",
+        "image": None,
+        "options": [
+            "placing the router in a secure room",
+            "disabling unused ports and interfaces",
+            "installing the maximum amount of memory possible",
+            "securing administrative access",
+            "using uninterruptible power supplies"
+        ],
+        "correct": [1, 3],
+        "explanation": "Router hardening involves disabling unused ports and interfaces and securing administrative access. Physical security (secure room) and power supplies are infrastructure concerns, not specifically router hardening tasks."
+    },
+    {
+        "id": 1010,
+        "type": "radio",
+        "question": "Which threat protection capability is provided by Cisco ESA?",
+        "image": None,
+        "options": [
+            "web filtering",
+            "cloud access security",
+            "spam protection",
+            "Layer 4 traffic monitoring"
+        ],
+        "correct": [2],
+        "explanation": "Email is a top attack vector for security breaches. Cisco ESA includes many threat protection capabilities for email such as spam protection, forged email detection, and Cisco advanced phishing protection."
+    },
 ]
