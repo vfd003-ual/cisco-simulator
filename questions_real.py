@@ -3,142 +3,81 @@
 questions_real = [
     {
         "id": 1001,
-        "type": "radio",
-        "question": "¿Cuál es el propósito principal de un firewall en la seguridad de red?",
-        "image": "/static/images/carlitos.jpg",
-        "options": [
-            "Aumentar la velocidad de la red",
-            "Filtrar y controlar el tráfico de red basándose en reglas de seguridad",
-            "Encriptar todas las contraseñas de los usuarios",
-            "Eliminar todos los virus de la red"
+        "type": "matching",
+        "question": "Match the type of ASA ACLs to the description. (Not all options are used.)",
+        "image": None,
+        "left_items": [
+            "standard access list",
+            "extended access list",
+            "EtherType access list",
+            "webtype access list"
         ],
-        "correct": [1],
-        "explanation": "Un firewall es una herramienta de seguridad que monitorea y controla el tráfico de red entrante y saliente basándose en reglas de seguridad predeterminadas."
+        "right_items": [
+            "used to identify the destination IP addresses only",
+            "used to specify source and destination addresses and protocol, ports, or the ICMP type",
+            "used only if the security appliance is running in transparent mode",
+            "used to support filtering for clientless SSL VPN",
+            "used to determine which IPv6 traffic to block or to forward at router interfaces",
+        ],
+        "correct": [0, 1, 2, 3],
+        "explanation": "Place the options in the following order:\n- extended access lists: used to specify source and destination addresses and protocol, ports, or the ICMP type\n- webtype access lists: used to support filtering for clientless SSL VPN\n- standard access lists: used to identify the destination IP addresses only\n- EtherType access lists: used only if the security appliance is running in transparent mode"
     },
     {
         "id": 1002,
         "type": "radio",
-        "question": "¿Qué protocolo se utiliza comúnmente para establecer conexiones VPN seguras?",
-        "image": "/static/images/carlitos.jpg",
+        "question": "Which statement describes a difference between the Cisco ASA IOS CLI feature and the router IOS CLI feature?",
+        "image": None,
         "options": [
-            "HTTP",
-            "FTP",
-            "IPsec",
-            "SMTP"
+            "ASA uses the ? command whereas a router uses the help command to receive help on a brief description and the syntax of a command.",
+            "To use a show command in a general configuration mode, ASA can use the command directly whereas a router will need to enter the do command before issuing the show command.",
+            "To complete a partially typed command, ASA uses the Ctrl+Tab key combination whereas a router uses the Tab key.",
+            "To indicate the CLI EXEC mode, ASA uses the % symbol whereas a router uses the # symbol."
         ],
-        "correct": [2],
-        "explanation": "IPsec (Internet Protocol Security) es un conjunto de protocolos diseñado para asegurar las comunicaciones IP mediante autenticación y encriptación, ampliamente utilizado en VPNs."
+        "correct": [1],
+        "explanation": "The ASA CLI is a proprietary OS which has a similar look and feel to the Cisco router IOS. Although it shares some common features with the router IOS, it has its unique features. For example, an ASA CLI command can be executed regardless of the current configuration mode prompt. The IOS do command is not required or recognized. Both the ASA CLI and the router CLI use the # symbol to indicate the EXEC mode. Both CLIs use the Tab key to complete a partially typed command. Different from the router IOS, the ASA provides a help command that provides a brief command description and syntax for certain commands."
     },
     {
         "id": 1003,
         "type": "radio",
-        "question": "¿Qué tipo de ataque implica enviar paquetes malformados a un sistema para causar su fallo?",
-        "image": "/static/images/carlitos.jpg",
+        "question": "Refer to the exhibit. A network administrator is configuring AAA implementation on an ASA device. What does the option link3 indicate?",
+        "image": "/static/images/1003.png",
         "options": [
-            "Phishing",
-            "Man-in-the-middle",
-            "DoS (Denial of Service)",
-            "SQL Injection"
+            "the network name where the AAA server resides",
+            "the specific AAA server name",
+            "the sequence of servers in the AAA server group",
+            "the interface name"
         ],
-        "correct": [2],
-        "explanation": "Un ataque de Denegación de Servicio (DoS) busca hacer que un sistema o servicio no esté disponible sobrecargándolo con tráfico malicioso o explotando vulnerabilidades."
+        "correct": [3],
+        "explanation": "The option link3 indicates the interface name on the ASA device where the AAA server is connected."
     },
     {
         "id": 1004,
         "type": "radio",
-        "question": "¿Cuál de las siguientes NO es una característica de los IDS (Intrusion Detection Systems)?",
-        "image": "/static/images/carlitos.jpg",
+        "question": "What provides both secure segmentation and threat defense in a Secure Data Center solution?",
+        "image": None,
         "options": [
-            "Monitorear el tráfico de red",
-            "Bloquear automáticamente ataques",
-            "Detectar patrones sospechosos",
-            "Generar alertas de seguridad"
+            "Cisco Security Manager software",
+            "AAA server",
+            "Adaptive Security Appliance",
+            "intrusion prevention system"
         ],
-        "correct": [1],
-        "explanation": "Los IDS detectan y alertan sobre actividades sospechosas, pero no bloquean activamente. Para bloqueo automático se utilizan IPS (Intrusion Prevention Systems)."
+        "correct": [2],
+        "explanation": "The Adaptive Security Appliance (ASA) provides both secure segmentation and threat defense capabilities in a Secure Data Center solution."
     },
     {
         "id": 1005,
-        "type": "radio",
-        "question": "¿Qué significa AAA en el contexto de seguridad de redes Cisco?",
-        "image": "/static/images/carlitos.jpg",
+        "type": "checkbox",
+        "question": "What are the three core components of the Cisco Secure Data Center solution? (Choose three.)",
+        "image": None,
         "options": [
-            "Access, Administration, Audit",
-            "Authentication, Authorization, Accounting",
-            "Automatic, Active, Available",
-            "Advanced, Adaptive, Analysis"
+            "mesh network",
+            "secure segmentation",
+            "visibility",
+            "threat defense",
+            "servers",
+            "infrastructure"
         ],
-        "correct": [1],
-        "explanation": "AAA representa Authentication (autenticación), Authorization (autorización) y Accounting (contabilidad), un framework fundamental para el control de acceso en redes Cisco."
+        "correct": [1, 2, 3],
+        "explanation": "Secure segmentation is used when managing and organizing data in a data center. Threat defense includes a firewall and intrusion prevention system (IPS). Data center visibility is designed to simplify operations and compliance reporting by providing consistent security policy enforcement."
     },
-    {
-        "id": 1006,
-        "type": "radio",
-        "question": "¿Qué puerto utiliza por defecto el protocolo HTTPS?",
-        "image": "/static/images/carlitos.jpg",
-        "options": [
-            "80",
-            "443",
-            "8080",
-            "22"
-        ],
-        "correct": [1],
-        "explanation": "HTTPS utiliza el puerto 443 por defecto para establecer conexiones seguras mediante SSL/TLS, mientras que HTTP utiliza el puerto 80."
-    },
-    {
-        "id": 1007,
-        "type": "radio",
-        "question": "¿Cuál es la diferencia principal entre cifrado simétrico y asimétrico?",
-        "image": "/static/images/carlitos.jpg",
-        "options": [
-            "El simétrico es más rápido pero menos seguro",
-            "El simétrico usa la misma clave para cifrar y descifrar",
-            "El asimétrico solo funciona con números",
-            "No hay diferencia significativa"
-        ],
-        "correct": [1],
-        "explanation": "El cifrado simétrico usa la misma clave para cifrar y descifrar, mientras que el asimétrico usa un par de claves (pública y privada)."
-    },
-    {
-        "id": 1008,
-        "type": "radio",
-        "question": "¿Qué tecnología se utiliza para segmentar una red en dominios de broadcast más pequeños?",
-        "image": "/static/images/carlitos.jpg",
-        "options": [
-            "Hub",
-            "VLAN",
-            "Repeater",
-            "Firewall"
-        ],
-        "correct": [1],
-        "explanation": "Las VLANs (Virtual Local Area Networks) permiten segmentar lógicamente una red física en múltiples redes virtuales, mejorando la seguridad y el rendimiento."
-    },
-    {
-        "id": 1009,
-        "type": "radio",
-        "question": "¿Qué protocolo proporciona autenticación segura para el acceso remoto a dispositivos de red?",
-        "image": "/static/images/carlitos.jpg",
-        "options": [
-            "Telnet",
-            "SSH",
-            "HTTP",
-            "SNMP v1"
-        ],
-        "correct": [1],
-        "explanation": "SSH (Secure Shell) proporciona un canal seguro y cifrado para el acceso remoto, reemplazando a Telnet que transmite información en texto plano."
-    },
-    {
-        "id": 1010,
-        "type": "radio",
-        "question": "¿Cuál es el propósito de un DMZ (Demilitarized Zone) en una arquitectura de red?",
-        "image": "/static/images/carlitos.jpg",
-        "options": [
-            "Aumentar la velocidad de Internet",
-            "Aislar servidores públicos de la red interna",
-            "Almacenar backups de seguridad",
-            "Gestionar direcciones IP"
-        ],
-        "correct": [1],
-        "explanation": "Una DMZ es una subred que aísla servidores de acceso público (web, email) de la red interna, agregando una capa adicional de seguridad."
-    }
 ]
