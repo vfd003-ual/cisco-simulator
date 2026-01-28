@@ -1769,4 +1769,513 @@ questions_real = [
         "correct": [0],
         "explanation": "Common ACEs to assist with antispoofing include blocking packets that have a source address in the 127.0.0.0/8 range, any private address, or any multicast addresses. Furthermore, the administrator should not allow any outbound packets with a source address other than a valid address that is used in the internal networks of the organization."
     },
+    {
+        "id": 1121,
+        "type": "matching",
+        "question": "Match the security term to the appropriate description. (Not all options are used.)",
+        "image": None,
+        "left_items": [
+            "vulnerability",
+            "exploit",
+            "assets",
+            "threat",
+            "mitigation",
+            "risk"
+        ],
+        "right_items": [
+            "a weakness in the design of a system that can be exploited by a threat",
+            "a mechanism that takes advantage of a vulnerability",
+            "the network equipment and confidential data owned by the organization",
+            "a potential danger to the data and network functionality of a company",
+            "the counter-measure to reduce the severity of a potential threat"
+        ],
+        "correct": [0, 1, 2, 3, 4],
+        "explanation": "Place the options in the following order:\n- vulnerability: a weakness in the design of a system that can be exploited by a threat\n- exploit: a mechanism that takes advantage of a vulnerability\n- assets: the network equipment and confidential data owned by the organization\n- threat: a potential danger to the data and network functionality of a company\n- mitigation: the counter-measure to reduce the severity of a potential threat"
+    },
+    {
+        "id": 1122,
+        "type": "checkbox",
+        "question": "Which two types of attacks are examples of reconnaissance attacks? (Choose two.)",
+        "image": None,
+        "options": [
+            "brute force",
+            "port scan",
+            "ping sweep",
+            "man-in-the-middle",
+            "SYN flood"
+        ],
+        "correct": [1, 2],
+        "explanation": "Reconnaissance attacks attempt to gather information about the targets. Ping sweeps will indicate which hosts are up and responding to pings, whereas port scans will indicate on which TCP and UDP ports the target is listening for incoming connections. Man-in-the-middle and brute force attacks are both examples of access attacks, and a SYN flood is an example of a denial of service (DoS) attack."
+    },
+    {
+        "id": 1123,
+        "type": "radio",
+        "question": "Which Cisco solution helps prevent ARP spoofing and ARP poisoning attacks?",
+        "image": None,
+        "options": [
+            "Dynamic ARP Inspection",
+            "IP Source Guard",
+            "DHCP Snooping",
+            "Port Security"
+        ],
+        "correct": [0],
+        "explanation": "Dynamic ARP Inspection (DAI) is a security feature that validates ARP packets in a network. DAI intercepts, logs, and discards ARP packets with invalid IP-to-MAC address bindings, protecting the network against ARP spoofing and ARP poisoning attacks."
+    },
+    {
+        "id": 1124,
+        "type": "radio",
+        "question": "When the Cisco NAC appliance evaluates an incoming connection from a remote device against the defined network policies, what feature is being used?",
+        "image": None,
+        "options": [
+            "posture assessment",
+            "remediation of noncompliant systems",
+            "authentication and authorization",
+            "quarantining of noncompliant systems"
+        ],
+        "correct": [0],
+        "explanation": "Posture assessment is the process of evaluating an incoming connection from a remote device against defined network policies. It checks the device's compliance with security requirements before granting network access."
+    },
+    {
+        "id": 1125,
+        "type": "checkbox",
+        "question": "Which two steps are required before SSH can be enabled on a Cisco router? (Choose two.)",
+        "image": None,
+        "options": [
+            "Give the router a host name and domain name.",
+            "Create a banner that will be displayed to users when they connect.",
+            "Generate a set of secret keys to be used for encryption and decryption.",
+            "Set up an authentication server to handle incoming connection requests.",
+            "Enable SSH on the physical interfaces where the incoming connection requests will be received."
+        ],
+        "correct": [0, 2],
+        "explanation": "There are four steps to configure SSH on a Cisco router. First, set the host name and domain name. Second, generate a set of RSA keys to be used for encrypting and decrypting the traffic. Third, create the user IDs and passwords of the users who will be connecting. Lastly, enable SSH on the vty lines on the router. SSH does not need to be set up on any physical interfaces, nor does an external authentication server need to be used. While it is a good idea to configure a banner to display legal information for connecting users, it is not required to enable SSH."
+    },
+    {
+        "id": 1126,
+        "type": "radio",
+        "question": "The network administrator for an e-commerce website requires a service that prevents customers from claiming that legitimate orders are fake. What service provides this type of guarantee?",
+        "image": None,
+        "options": [
+            "confidentiality",
+            "authentication",
+            "integrity",
+            "nonrepudiation"
+        ],
+        "correct": [3],
+        "explanation": "Nonrepudiation is a service that prevents a party from denying previous actions. In the context of e-commerce, it ensures that customers cannot deny placing legitimate orders."
+    },
+    {
+        "id": 1127,
+        "type": "matching",
+        "question": "Match the security technology with the description.",
+        "image": None,
+        "left_items": [
+            "digital signatures",
+            "digital certificates",
+            "PKI"
+        ],
+        "right_items": [
+            "used to authenticate and verify that a user who is sending a message is who they claim to be",
+            "used to assure the authenticity and integrity of software code",
+            "used to support large-scale distribution and identification of public encryption keys"
+        ],
+        "correct": [0, 1, 2],
+        "explanation": "Place the options in the following order:\n- digital signatures: used to authenticate and verify that a user who is sending a message is who they claim to be\n- digital certificates: used to assure the authenticity and integrity of software code\n- PKI: used to support large-scale distribution and identification of public encryption keys"
+    },
+    {
+        "id": 1128,
+        "type": "radio",
+        "question": "What functionality is provided by Cisco SPAN in a switched network?",
+        "image": None,
+        "options": [
+            "It mirrors traffic that passes through a switch port or VLAN to another port for traffic analysis.",
+            "It prevents traffic on a LAN from being disrupted by a broadcast storm.",
+            "It protects the switched network from receiving BPDUs on ports that should not be receiving them.",
+            "It copies traffic that passes through a switch interface and sends the data directly to a syslog or SNMP server for analysis.",
+            "It inspects voice protocols to ensure that SIP, SCCP, H.323, and MGCP requests conform to voice standards.",
+            "It mitigates MAC address overflow attacks."
+        ],
+        "correct": [0],
+        "explanation": "SPAN is a Cisco technology used by network administrators to monitor suspicious traffic or to capture traffic to be analyzed."
+    },
+    {
+        "id": 1129,
+        "type": "checkbox",
+        "question": "Which three statements are generally considered to be best practices in the placement of ACLs? (Choose three.)",
+        "image": None,
+        "options": [
+            "Filter unwanted traffic before it travels onto a low-bandwidth link.",
+            "Place standard ACLs close to the destination IP address of the traffic.",
+            "Place standard ACLs close to the source IP address of the traffic.",
+            "Place extended ACLs close to the destination IP address of the traffic.",
+            "Place extended ACLs close to the source IP address of the traffic.",
+            "For every inbound ACL placed on an interface, there should be a matching outbound ACL."
+        ],
+        "correct": [0, 1, 4],
+        "explanation": "Extended ACLs should be placed as close as possible to the source IP address, so that traffic that needs to be filtered does not cross the network and use network resources. Because standard ACLs do not specify a destination address, they should be placed as close to the destination as possible. Placing a standard ACL close to the source may have the effect of filtering all traffic, and limiting services to other hosts. Filtering unwanted traffic before it enters low-bandwidth links preserves bandwidth and supports network functionality. Decisions on placing ACLs inbound or outbound are dependent on the requirements to be met."
+    },
+    {
+        "id": 1130,
+        "type": "radio",
+        "question": "What function is performed by the class maps configuration object in the Cisco modular policy framework?",
+        "image": None,
+        "options": [
+            "identifying interesting traffic",
+            "applying a policy to an interface",
+            "applying a policy to interesting traffic",
+            "restricting traffic through an interface"
+        ],
+        "correct": [0],
+        "explanation": "There are three configuration objects in the MPF; class maps, policy maps, and service policy. The class maps configuration object uses match criteria to identify interesting traffic."
+    },
+    {
+        "id": 1131,
+        "type": "checkbox",
+        "question": "In an attempt to prevent network attacks, cyber analysts share unique identifiable attributes of known attacks with colleagues. What three types of attributes or indicators of compromise are helpful to share? (Choose three.)",
+        "image": None,
+        "options": [
+            "IP addresses of attack servers",
+            "changes made to end system software",
+            "netbios names of compromised firewalls",
+            "features of malware files",
+            "BIOS of attacking systems",
+            "system ID of compromised systems"
+        ],
+        "correct": [0, 1, 3],
+        "explanation": "Many network attacks can be prevented by sharing information about indicators of compromise (IOC). Each attack has unique identifiable attributes. Indicators of compromise are the evidence that an attack has occurred. IOCs can be identifying features of malware files, IP addresses of servers that are used in the attack, filenames, and characteristic changes made to end system software."
+    },
+    {
+        "id": 1132,
+        "type": "checkbox",
+        "question": "What two assurances does digital signing provide about code that is downloaded from the Internet? (Choose two.)",
+        "image": None,
+        "options": [
+            "The code is authentic and is actually sourced by the publisher.",
+            "The code contains no errors.",
+            "The code has not been modified since it left the software publisher.",
+            "The code contains no viruses.",
+            "The code was encrypted with both a private and public key."
+        ],
+        "correct": [0, 2],
+        "explanation": "Digitally signing code provides several assurances about the code: The code is authentic and is actually sourced by the publisher. The code has not been modified since it left the software publisher. The publisher undeniably published the code. This provides nonrepudiation of the act of publishing."
+    },
+    {
+        "id": 1133,
+        "type": "radio",
+        "question": "Refer to the exhibit. What algorithm is being used to provide public key exchange?",
+        "image": "/static/images/1133.png",
+        "options": [
+            "SHA",
+            "RSA",
+            "Diffie-Hellman",
+            "AES"
+        ],
+        "correct": [2],
+        "explanation": "The IPsec framework uses various protocols and algorithms to provide data confidentiality, data integrity, authentication, and secure key exchange. DH (Diffie-Hellman) is an algorithm used for key exchange. DH is a public key exchange method and allows two IPsec peers to establish a shared secret key over an insecure channel."
+    },
+    {
+        "id": 1134,
+        "type": "checkbox",
+        "question": "Which two statements describe the use of asymmetric algorithms? (Choose two.)",
+        "image": None,
+        "options": [
+            "Public and private keys may be used interchangeably.",
+            "If a public key is used to encrypt the data, a public key must be used to decrypt the data.",
+            "If a private key is used to encrypt the data, a public key must be used to decrypt the data.",
+            "If a public key is used to encrypt the data, a private key must be used to decrypt the data.",
+            "If a private key is used to encrypt the data, a private key must be used to decrypt the data."
+        ],
+        "correct": [2, 3],
+        "explanation": "Asymmetric algorithms use two keys: a public key and a private key. Both keys are capable of the encryption process, but the complementary matched key is required for decryption. If a public key encrypts the data, the matching private key decrypts the data. The opposite is also true. If a private key encrypts the data, the corresponding public key decrypts the data."
+    },
+    {
+        "id": 1135,
+        "type": "radio",
+        "question": "Which statement is a feature of HMAC?",
+        "image": None,
+        "options": [
+            "HMAC uses a secret key that is only known to the sender and defeats man-in-the-middle attacks.",
+            "HMAC uses protocols such as SSL or TLS to provide session layer confidentiality.",
+            "HMAC uses a secret key as input to the hash function, adding authentication to integrity assurance.",
+            "HMAC is based on the RSA hash function."
+        ],
+        "correct": [2],
+        "explanation": "A keyed-hash message authentication code (HMAC or KHMAC) is a type of message authentication code (MAC). HMACs use an additional secret key as input to the hash function, adding authentication to data integrity assurance."
+    },
+    {
+        "id": 1136,
+        "type": "radio",
+        "question": "What is the purpose of the webtype ACLs in an ASA?",
+        "image": None,
+        "options": [
+            "to inspect outbound traffic headed towards certain web sites",
+            "to restrict traffic that is destined to an ASDM",
+            "to monitor return traffic that is in response to web server requests that are initiated from the inside interface",
+            "to filter traffic for clientless SSL VPN users"
+        ],
+        "correct": [3],
+        "explanation": "The webtype ACLs are used in a configuration that supports filtering for clientless SSL VPN users."
+    },
+    {
+        "id": 1137,
+        "type": "checkbox",
+        "question": "Which two statements describe the effect of the access control list wildcard mask 0.0.0.15? (Choose two.)",
+        "image": None,
+        "options": [
+            "The first 28 bits of a supplied IP address will be matched.",
+            "The last four bits of a supplied IP address will be matched.",
+            "The first 28 bits of a supplied IP address will be ignored.",
+            "The last four bits of a supplied IP address will be ignored.",
+            "The last five bits of a supplied IP address will be ignored.",
+            "The first 32 bits of a supplied IP address will be matched."
+        ],
+        "correct": [0, 3],
+        "explanation": "A wildcard mask uses 0s to indicate that bits must match. 0s in the first three octets represent 24 bits and four more zeros in the last octet, represent a total of 28 bits that must match. The four 1s represented by the decimal value of 15 represents the four bits to ignore."
+    },
+    {
+        "id": 1138,
+        "type": "radio",
+        "question": "Which type of firewall is the most common and allows or blocks traffic based on Layer 3, Layer 4, and Layer 5 information?",
+        "image": None,
+        "options": [
+            "stateless firewall",
+            "packet filtering firewall",
+            "next generation firewall",
+            "stateful firewall"
+        ],
+        "correct": [3],
+        "explanation": "Stateful firewalls are the most common type and allow or block traffic based on Layer 3, Layer 4, and Layer 5 information. They track the state of connections and make decisions based on the context of the traffic."
+    },
+    {
+        "id": 1139,
+        "type": "radio",
+        "question": "Which protocol or measure should be used to mitigate the vulnerability of using FTP to transfer documents between a teleworker and the company file server?",
+        "image": None,
+        "options": [
+            "SCP",
+            "TFTP",
+            "ACLs on the file server",
+            "out-of-band communication channel"
+        ],
+        "correct": [0],
+        "explanation": "File transfer using FTP is transmitted in plain text. The username and password would be easily captured if the data transmission is intercepted. Secure Copy Protocol (SCP) conducts the authentication and file transfer under SSH, thus the communication is encrypted. Like FTP, TFTP transfers files unencrypted. ACLs provide network traffic filtering but not encryption. Using an out-of-band communication channel (OOB) either requires physical access to the file server or, if done through the internet, does not necessarily encrypt the communication."
+    },
+    {
+        "id": 1140,
+        "type": "radio",
+        "question": "Refer to the exhibit. The IPv6 access list LIMITED_ACCESS is applied on the S0/0/0 interface of R1 in the inbound direction. Which IPv6 packets from the ISP will be dropped by the ACL on R1?",
+        "image": "/static/images/1140.png",
+        "options": [
+            "HTTPS packets to PC1",
+            "ICMPv6 packets that are destined to PC1",
+            "packets that are destined to PC1 on port 80",
+            "neighbor advertisements that are received from the ISP router"
+        ],
+        "correct": [1],
+        "explanation": "The access list LIMITED_ACCESS will block ICMPv6 packets from the ISP. Both port 80, HTTP traffic, and port 443, HTTPS traffic, are explicitly permitted by the ACL. The neighbor advertisements from the ISP router are implicitly permitted by the implicit permit icmp any any nd-na statement at the end of all IPv6 ACLs."
+    },
+    {
+        "id": 1141,
+        "type": "radio",
+        "question": "What tool is available through the Cisco IOS CLI to initiate security audits and to make recommended configuration changes with or without administrator input?",
+        "image": None,
+        "options": [
+            "Control Plane Policing",
+            "Cisco AutoSecure",
+            "Cisco ACS",
+            "Simple Network Management Protocol"
+        ],
+        "correct": [1],
+        "explanation": "Cisco AutoSecure is a feature available through the Cisco IOS CLI that helps secure a router by disabling common IP services that can be exploited for network attacks and enabling IP services that can help in the defense of a network."
+    },
+    {
+        "id": 1142,
+        "type": "radio",
+        "question": "Refer to the exhibit. Which pair of crypto isakmp key commands would correctly configure PSK on the two routers?",
+        "image": "/static/images/1142.jpg",
+        "options": [
+            "R1(config)# crypto isakmp key cisco123 address 209.165.200.227\nR2(config)# crypto isakmp key cisco123 address 209.165.200.226",
+            "R1(config)# crypto isakmp key cisco123 address 209.165.200.226\nR2(config)# crypto isakmp key cisco123 address 209.165.200.227",
+            "R1(config)# crypto isakmp key cisco123 hostname R1\nR2(config)# crypto isakmp key cisco123 hostname R2",
+            "R1(config)# crypto isakmp key cisco123 address 209.165.200.226\nR2(config)# crypto isakmp key secure address 209.165.200.227"
+        ],
+        "correct": [0],
+        "explanation": "The correct syntax of the crypto isakmp key command is: crypto isakmp key keystring address peer-address. Each router must reference the other router's IP address. So R1 uses R2's address (209.165.200.227) and R2 uses R1's address (209.165.200.226)."
+    },
+    {
+        "id": 1143,
+        "type": "checkbox",
+        "question": "Which two technologies provide enterprise-managed VPN solutions? (Choose two.)",
+        "image": None,
+        "options": [
+            "Layer 3 MPLS VPN",
+            "Frame Relay",
+            "site-to-site VPN",
+            "Layer 2 MPLS VPN",
+            "remote access VPN"
+        ],
+        "correct": [2, 4],
+        "explanation": "Enterprise-managed VPNs include site-to-site VPN and remote access VPN. These are managed by the enterprise rather than a service provider. MPLS VPNs are provider-managed solutions."
+    },
+    {
+        "id": 1144,
+        "type": "checkbox",
+        "question": "What are the three components of an STP bridge ID? (Choose three.)",
+        "image": None,
+        "options": [
+            "the date and time that the switch was brought online",
+            "the hostname of the switch",
+            "the MAC address of the switch",
+            "the extended system ID",
+            "the bridge priority value",
+            "the IP address of the management VLAN"
+        ],
+        "correct": [2, 3, 4],
+        "explanation": "The STP bridge ID consists of three components: the bridge priority value, the extended system ID (VLAN ID), and the MAC address of the switch."
+    },
+    {
+        "id": 1145,
+        "type": "checkbox",
+        "question": "What are two differences between stateful and packet filtering firewalls? (Choose two.)",
+        "image": None,
+        "options": [
+            "A packet filtering firewall will prevent spoofing by determining whether packets belong to an existing connection while a stateful firewall follows pre-configured rule sets.",
+            "A stateful firewall provides more stringent control over security than a packet filtering firewall.",
+            "A packet filtering firewall is able to filter sessions that use dynamic port negotiations while a stateful firewall cannot.",
+            "A stateful firewall will provide more logging information than a packet filtering firewall.",
+            "A stateful firewall will examine each packet individually while a packet filtering firewall observes the state of a connection."
+        ],
+        "correct": [1, 3],
+        "explanation": "There are many differences between a stateless and stateful firewall. Stateful firewalls: are often used as a primary means of defense by filtering unwanted, unnecessary, or undesirable traffic; strengthen packet filtering by providing more stringent control over security; improve performance over packet filters or proxy servers; defend against spoofing and DoS attacks by determining whether packets belong to an existing connection or are from an unauthorized source; provide more log information than a packet filtering firewall."
+    },
+    {
+        "id": 1146,
+        "type": "radio",
+        "question": "Which portion of the Snort IPS rule header identifies the destination port?\n\nalert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS",
+        "image": None,
+        "options": [
+            "any",
+            "$HTTP_PORTS",
+            "$HOME_NET",
+            "tcp"
+        ],
+        "correct": [1],
+        "explanation": "In a Snort rule header, the format is: action protocol source_ip source_port -> dest_ip dest_port. The $HTTP_PORTS variable identifies the destination port in this rule."
+    },
+    {
+        "id": 1147,
+        "type": "matching",
+        "question": "Match each SNMP operation to the corresponding description. (Not all options are used.)",
+        "image": None,
+        "left_items": [
+            "set-request",
+            "get-bulk-request",
+            "get-next-request",
+            "get-response"
+        ],
+        "right_items": [
+            "storing a value in a specific variable",
+            "retrieving multiple rows in a table in a single transmission",
+            "sequentially searching tables to retrieve a value from a variable",
+            "replying to GET request and SET request messages that are sent by an NMS"
+        ],
+        "correct": [0, 1, 2, 3],
+        "explanation": "Place the options in the following order:\n- set-request: storing a value in a specific variable\n- get-bulk-request: retrieving multiple rows in a table in a single transmission\n- get-next-request: sequentially searching tables to retrieve a value from a variable\n- get-response: replying to GET request and SET request messages that are sent by an NMS"
+    },
+    {
+        "id": 1148,
+        "type": "radio",
+        "question": "What port state is used by 802.1X if a workstation fails authorization?",
+        "image": None,
+        "options": [
+            "disabled",
+            "down",
+            "unauthorized",
+            "blocking"
+        ],
+        "correct": [2],
+        "explanation": "802.1X uses the unauthorized port state when a workstation fails authorization. The port remains in this state until the workstation successfully authenticates."
+    },
+    {
+        "id": 1149,
+        "type": "matching",
+        "question": "Match the ASA special hardware modules to the description.",
+        "image": None,
+        "left_items": [
+            "Content Security and Control (CSC)",
+            "Advanced Inspection and Prevention (AIP)",
+            "Cisco Advanced Inspection and Prevention Security Services Module (AIP-SSM)"
+        ],
+        "right_items": [
+            "support antimalware capabilities",
+            "support advanced IPS capability",
+            "support protection against tens of thousands of known exploits"
+        ],
+        "correct": [0, 1, 2],
+        "explanation": "The advanced threat control and containment services of an ASA firewall are provided by integrating special hardware modules with the ASA architecture. AIP supports advanced IPS capability. CSC supports antimalware capabilities. AIP-SSM supports protection against tens of thousands of known exploits."    },
+    {
+        "id": 1150,
+        "type": "checkbox",
+        "question": "Refer to the exhibit. Which two ACLs, if applied to the G0/1 interface of R2, would permit only the two LAN networks attached to R1 to access the network that connects to R2 G0/1 interface? (Choose two.)",
+        "image": "/static/images/1150.jpg",
+        "options": [
+            "access-list 3 permit 192.168.10.128 0.0.0.63",
+            "access-list 1 permit 192.168.10.0 0.0.0.127",
+            "access-list 4 permit 192.168.10.0 0.0.0.255",
+            "access-list 2 permit host 192.168.10.9\naccess-list 2 permit host 192.168.10.69",
+            "access-list 5 permit 192.168.10.0 0.0.0.63\naccess-list 5 permit 192.168.10.64 0.0.0.63"
+        ],
+        "correct": [1, 4],
+        "explanation": "The permit 192.168.10.0 0.0.0.127 command ignores bit positions 1 through 7, which means that addresses 192.168.10.0 through 192.168.10.127 are allowed through. The two ACEs of permit 192.168.10.0 0.0.0.63 and permit 192.168.10.64 0.0.0.63 allow the same address range through the router."
+    },
+    {
+        "id": 1151,
+        "type": "checkbox",
+        "question": "Which two characteristics apply to role-based CLI access superviews? (Choose two.)",
+        "image": None,
+        "options": [
+            "A specific superview cannot have commands added to it directly.",
+            "CLI views have passwords, but superviews do not have passwords.",
+            "A single superview can be shared among multiple CLI views.",
+            "Deleting a superview deletes all associated CLI views.",
+            "Users logged in to a superview can access all commands specified within the associated CLI views."
+        ],
+        "correct": [0, 4],
+        "explanation": "By using a superview an administrator can assign users or groups of users to CLI views which contain a specific set of commands those users can access. Commands cannot be added directly to a superview but rather must be added to a CLI view and the CLI view added to the superview."
+    },
+    {
+        "id": 1152,
+        "type": "matching",
+        "question": "Match the IPS alarm type to the description.",
+        "image": None,
+        "left_items": [
+            "true positive",
+            "true negative",
+            "false positive",
+            "false negative"
+        ],
+        "right_items": [
+            "verified attack traffic is generating an alarm",
+            "normal user traffic is not generating an alarm",
+            "normal user traffic is generating an alarm",
+            "attack traffic is not generating an alarm"
+        ],
+        "correct": [0, 1, 2, 3],
+        "explanation": "Place the options in the following order:\n- true positive: verified attack traffic is generating an alarm\n- true negative: normal user traffic is not generating an alarm\n- false positive: normal user traffic is generating an alarm\n- false negative: attack traffic is not generating an alarm"
+    },
+    {
+        "id": 1153,
+        "type": "checkbox",
+        "question": "What are two security features commonly found in a WAN design? (Choose two.)",
+        "image": None,
+        "options": [
+            "WPA2 for data encryption of all data between sites",
+            "firewalls protecting the main and remote sites",
+            "outside perimeter security including continuous video surveillance",
+            "port security on all user-facing ports",
+            "VPNs used by mobile workers between sites"
+        ],
+        "correct": [1, 4],
+        "explanation": "WANs span a wide area and commonly have connections from a main site to remote sites including a branch office, regional site, SOHO sites, and mobile workers. WANs typically connect over a public internet connection. Each site commonly has a firewall and VPNs used by remote workers between sites."
+    },
 ]
