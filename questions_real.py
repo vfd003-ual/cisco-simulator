@@ -631,10 +631,17 @@ questions_real = [
     },
     {
         "id": 1043,
-        "type": "ordering",
+        "type": "matching",
         "question": "Place the steps for configuring zone-based policy (ZPF) firewalls in order from first to last. (Not all options are used.)",
         "image": None,
-        "options": [
+        "left_items": [
+            "1st",
+            "2nd",
+            "3rd",
+            "4th",
+            "5th"
+        ],
+        "right_items": [
             "Apply policies.",
             "Assign zones to interfaces.",
             "Create access lists.",
