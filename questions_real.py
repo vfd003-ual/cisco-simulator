@@ -666,4 +666,217 @@ questions_real = [
         "correct": [1],
         "explanation": "Traffic originating from the private network is inspected as it travels toward the public or DMZ network. This traffic is permitted with little or no restriction. Inspected traffic returning from the DMZ or public network to the private network is permitted.(TAMBIÉN PUEDE SER LA OPCIÓN 3: The traffic is selectively permitted and inspected.)"
     },
+    {
+        "id": 1045,
+        "type": "checkbox",
+        "question": "Which two protocols generate connection information within a state table and are supported for stateful filtering? (Choose two.)",
+        "image": None,
+        "options": [
+            "ICMP",
+            "UDP",
+            "DHCP",
+            "TCP",
+            "HTTP"
+        ],
+        "correct": [3, 4],
+        "explanation": "Stateful firewalls maintain connection state information in a state table. TCP and HTTP are connection-oriented protocols that generate connection information that can be tracked. TCP uses a three-way handshake to establish connections, and HTTP runs over TCP, both creating entries in the state table. UDP and ICMP are connectionless protocols that don't maintain state information in the same way. DHCP uses UDP as its transport protocol."
+    },
+    {
+        "id": 1046,
+        "type": "radio",
+        "question": "Which type of firewall is supported by most routers and is the easiest to implement?",
+        "image": None,
+        "options": [
+            "next generation firewall",
+            "stateless firewall",
+            "stateful firewall",
+            "proxy firewall"
+        ],
+        "correct": [1],
+        "explanation": "Packet Filtering (Stateless) Firewall uses a simple policy table look-up that filters traffic based on specific criteria and is considered the easiest firewall to implement."
+    },
+    {
+        "id": 1047,
+        "type": "radio",
+        "question": "What network testing tool would an administrator use to assess and validate system configurations against security policies and compliance standards?",
+        "image": None,
+        "options": [
+            "Tripwire",
+            "L0phtcrack",
+            "Nessus",
+            "Metasploit"
+        ],
+        "correct": [0],
+        "explanation": "Tripwire – This tool assesses and validates IT configurations against internal policies, compliance standards, and security best practices."
+    },
+    {
+        "id": 1048,
+        "type": "radio",
+        "question": "What type of network security test can detect and report changes made to network systems?",
+        "image": None,
+        "options": [
+            "vulnerability scanning",
+            "network scanning",
+            "integrity checking",
+            "penetration testing"
+        ],
+        "correct": [2],
+        "explanation": "Integrity checking is used to detect and report changes made to systems. Vulnerability scanning is used to find weaknesses and misconfigurations on network systems. Network scanning is used to discover available resources on the network."
+    },
+    {
+        "id": 1049,
+        "type": "radio",
+        "question": "What network security testing tool has the ability to provide details on the source of suspicious network activity?",
+        "image": None,
+        "options": [
+            "SIEM",
+            "SuperScan",
+            "Zenmap",
+            "Tripwire"
+        ],
+        "correct": [0],
+        "explanation": "There are various network security tools available for network security testing and evaluation. SuperScan is a Microsoft port scanning software that detects open TCP and UDP ports on systems. Nmap and Zenmap are low-level network scanners available to the public. Tripwire is used to assess if network devices are compliant with network security policies. SIEM is used to provide real-time reporting of security events on the network."
+    },
+    {
+        "id": 1050,
+        "type": "radio",
+        "question": "How do modern cryptographers defend against brute-force attacks?",
+        "image": None,
+        "options": [
+            "Use statistical analysis to eliminate the most common encryption keys.",
+            "Use a keyspace large enough that it takes too much money and too much time to conduct a successful attack.",
+            "Use an algorithm that requires the attacker to have both ciphertext and plaintext to conduct a successful attack.",
+            "Use frequency analysis to ensure that the most popular letters used in the language are not used in the cipher message."
+        ],
+        "correct": [1],
+        "explanation": "In a brute-force attack, an attacker tries every possible key with the decryption algorithm knowing that eventually one of them will work. To defend against the brute-force attacks, modern cryptographers have as an objective to have a keyspace (a set of all possible keys) large enough so that it takes too much money and too much time to accomplish a brute-force attack. A security policy requiring passwords to be changed in a predefined interval further defend against the brute-force attacks. The idea is that passwords will have been changed before an attacker exhausts the keyspace."
+    },
+    {
+        "id": 1051,
+        "type": "radio",
+        "question": "How does a Caesar cipher work on a message?",
+        "image": None,
+        "options": [
+            "Letters of the message are replaced by another letter that is a set number of places away in the alphabet.",
+            "Letters of the message are rearranged randomly.",
+            "Letters of the message are rearranged based on a predetermined pattern.",
+            "Words of the message are substituted based on a predetermined pattern."
+        ],
+        "correct": [0],
+        "explanation": "A Caesar cipher is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet."
+    },
+    {
+        "id": 1052,
+        "type": "radio",
+        "question": "What is the main factor that ensures the security of encryption of modern algorithms?",
+        "image": None,
+        "options": [
+            "complexity of the hashing algorithm",
+            "the use of 3DES over AES",
+            "secrecy of the keys",
+            "secrecy of the algorithm"
+        ],
+        "correct": [2],
+        "explanation": "With most modern algorithms, successful decryption requires knowledge of the appropriate cryptographic keys. This means that the security of encryption lies in the secrecy of the keys, not the algorithm."
+    },
+    {
+        "id": 1053,
+        "type": "radio",
+        "question": "What is the next step in the establishment of an IPsec VPN after IKE Phase 1 is complete?",
+        "image": None,
+        "options": [
+            "negotiation of the ISAKMP policy",
+            "negotiation of the IPsec SA policy",
+            "detection of interesting traffic",
+            "authentication of peers"
+        ],
+        "correct": [1],
+        "explanation": "Establishing an IPsec tunnel involves five steps:\n1. detection of interesting traffic defined by an ACL\n2. IKE Phase 1 in which peers negotiate ISAKMP SA policy\n3. IKE Phase 2 in which peers negotiate IPsec SA policy\n4. Creation of the IPsec tunnel\n5. Termination of the IPsec tunnel"
+    },
+    {
+        "id": 1054,
+        "type": "radio",
+        "question": "Refer to the exhibit. What algorithm will be used for providing confidentiality?",
+        "image": "/static/images/1054.jpg",
+        "options": [
+            "RSA",
+            "Diffie-Hellman",
+            "DES",
+            "AES"
+        ],
+        "correct": [3],
+        "explanation": "The IPsec framework uses various protocols and algorithms to provide data confidentiality, data integrity, authentication, and secure key exchange. Two popular algorithms that are used to ensure that data is not intercepted and modified (data integrity) are MD5 and SHA. AES is an encryption protocol and provides data confidentiality. DH (Diffie-Hellman) is an algorithm that is used for key exchange. RSA is an algorithm used for authentication."
+    },
+    {
+        "id": 1055,
+        "type": "radio",
+        "question": "After issuing a show run command, an analyst notices the following command:\n\ncrypto ipsec transform-set MYSET esp-aes 256 esp-md5-hmac\n\nWhat is the purpose of this command?",
+        "image": None,
+        "options": [
+            "It establishes the set of encryption and hashing algorithms used to secure the data sent through an IPsec tunnel.",
+            "It defines the default ISAKMP policy list used to establish the IKE Phase 1 tunnel.",
+            "It establishes the criteria to force the IKE Phase 1 negotiations to begin.",
+            "It indicates that IKE will be used to establish the IPsec tunnel for protecting the traffic."
+        ],
+        "correct": [0],
+        "explanation": "The crypto ipsec transform-set command defines the encryption (esp-aes 256) and hashing (esp-md5-hmac) algorithms used to secure data in an IPsec tunnel."
+    },
+    {
+        "id": 1056,
+        "type": "radio",
+        "question": "Which algorithm can ensure data integrity?",
+        "image": None,
+        "options": [
+            "RSA",
+            "AES",
+            "MD5",
+            "PKI"
+        ],
+        "correct": [2],
+        "explanation": "Data integrity guarantees that the message was not altered in transit. Integrity is ensured by implementing either of the Secure Hash Algorithms (SHA-2 or SHA-3). The MD5 message digest algorithm is still widely in use."
+    },
+    {
+        "id": 1057,
+        "type": "checkbox",
+        "question": "A company implements a security policy that ensures that a file sent from the headquarters office to the branch office can only be opened with a predetermined code. This code is changed every day. Which two algorithms can be used to achieve this task? (Choose two.)",
+        "image": None,
+        "options": [
+            "HMAC",
+            "MD5",
+            "3DES",
+            "SHA-1",
+            "AES"
+        ],
+        "correct": [2, 4],
+        "explanation": "The task to ensure that only authorized personnel can open a file is data confidentiality, which can be implemented with encryption. AES and 3DES are two encryption algorithms. HMAC can be used for ensuring origin authentication. MD5 and SHA-1 can be used to ensure data integrity."
+    },
+    {
+        "id": 1058,
+        "type": "radio",
+        "question": "A network technician has been asked to design a virtual private network between two branch routers. Which type of cryptographic key should be used in this scenario?",
+        "image": None,
+        "options": [
+            "hash key",
+            "symmetric key",
+            "asymmetric key",
+            "digital signature"
+        ],
+        "correct": [1],
+        "explanation": "A symmetric key requires that both routers have access to the secret key that is used to encrypt and decrypt exchanged data."
+    },
+    {
+        "id": 1059,
+        "type": "checkbox",
+        "question": "Which two options can limit the information discovered from port scanning? (Choose two.)",
+        "image": None,
+        "options": [
+            "intrusion prevention system",
+            "firewall",
+            "authentication",
+            "passwords",
+            "encryption"
+        ],
+        "correct": [0, 1],
+        "explanation": "Using an intrusion prevention system (IPS) and firewall can limit the information that can be discovered with a port scanner. Authentication, encryption, and passwords provide no protection from loss of information from port scanning."
+    },
 ]
