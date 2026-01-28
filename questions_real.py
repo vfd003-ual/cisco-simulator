@@ -468,4 +468,135 @@ questions_real = [
         "correct": [2],
         "explanation": "An IPS is deployed in inline mode and will not allow malicious traffic to enter the internal network without first analyzing it. An advantage of this is that it can stop an attack immediately. An IDS is deployed in promiscuous mode. It copies the traffic patterns and analyzes them offline, thus it cannot stop the attack immediately and it relies on another device to take further actions once it detects an attack. Being deployed in inline mode, an IPS can negatively impact the traffic flow. Both IDS and IPS can use signature-based technology to detect malicious packets. An IPS cannot replace other security devices, such as firewalls, because they perform different tasks."
     },
+    {
+        "id": 1033,
+        "type": "radio",
+        "question": "Which attack is defined as an attempt to exploit software vulnerabilities that are unknown or undisclosed by the vendor?",
+        "image": None,
+        "options": [
+            "zero-day",
+            "Trojan horse",
+            "brute-force",
+            "man-in-the-middle"
+        ],
+        "correct": [0],
+        "explanation": "A zero-day attack exploits software vulnerabilities that are unknown or undisclosed by the vendor. These attacks are particularly dangerous because there are no patches or defenses available at the time of the attack."
+    },
+    {
+        "id": 1034,
+        "type": "matching",
+        "question": "Match the network monitoring technology with the description.",
+        "image": None,
+        "left_items": [
+            "passively monitors network traffic",
+            "uses VLANs to monitor traffic on remote switches",
+            "a passive traffic splitting device implemented inline between a device of interest and the network",
+            "can perform a packet drop to stop the trigger packets"
+        ],
+        "right_items": [
+            "RSPAN",
+            "IDS",
+            "IPS",
+            "TAP"
+        ],
+        "correct": [1, 0, 3, 2],
+        "explanation": "Place the options in the following order:\n- passively monitors network traffic: IDS\n- uses VLANs to monitor traffic on remote switches: RSPAN\n- a passive traffic splitting device implemented inline between a device of interest and the network: TAP\n- can perform a packet drop to stop the trigger packets: IPS"
+    },
+    {
+        "id": 1035,
+        "type": "checkbox",
+        "question": "What are the three signature levels provided by Snort IPS on the 4000 Series ISR? (Choose three.)",
+        "image": None,
+        "options": [
+            "security",
+            "drop",
+            "reject",
+            "connectivity",
+            "inspect",
+            "balanced"
+        ],
+        "correct": [0, 3, 5],
+        "explanation": "Snort IPS on the 4000 Series ISR provides three signature levels: security, connectivity, and balanced. These levels determine the trade-off between security protection and network performance."
+    },
+    {
+        "id": 1036,
+        "type": "checkbox",
+        "question": "What are three attributes of IPS signatures? (Choose three.)",
+        "image": None,
+        "options": [
+            "action",
+            "length",
+            "trigger",
+            "type",
+            "depth",
+            "function"
+        ],
+        "correct": [0, 2, 3],
+        "explanation": "IPS signatures have three distinctive attributes:\n- type\n- trigger (alarm)\n- action"
+    },
+    {
+        "id": 1037,
+        "type": "matching",
+        "question": "Match each IPS signature trigger category with the description.",
+        "image": None,
+        "left_items": [
+            "pattern-based detection",
+            "anomaly-based detection",
+            "policy-based detection",
+            "honey pot-based detection"
+        ],
+        "right_items": [
+            "simplest triggering mechanism which searches for a specific and pre-defined atomic or composite pattern",
+            "involves first defining a profile of what is considered normal network or host activity",
+            "requires an administrator to manually define behaviors that are suspicious based on historical analysis",
+            "uses a decoy server to divert attacks away from production devices"
+        ],
+        "correct": [0, 1, 2, 3],
+        "explanation": "(ESTA PREGUNTA PUEDE APARECER EN VARIOS FORMATOS)\nIPS signature trigger categories:\n- pattern-based detection: simplest triggering mechanism which searches for a specific and pre-defined atomic or composite pattern\n- anomaly-based detection: involves first defining a profile of what is considered normal network or host activity\n- policy-based detection: requires an administrator to manually define behaviors that are suspicious based on historical analysis\n- honey pot-based detection: uses a decoy server to divert attacks away from production devices"
+    },
+    {
+        "id": 1038,
+        "type": "checkbox",
+        "question": "Which two features are included by both TACACS+ and RADIUS protocols? (Choose two.)",
+        "image": None,
+        "options": [
+            "SIP support",
+            "password encryption",
+            "802.1X support",
+            "separate authentication and authorization processes",
+            "utilization of transport layer protocols"
+        ],
+        "correct": [1, 4],
+        "explanation": "Both TACACS+ and RADIUS support password encryption (TACACS+ encrypts all communication) and use Layer 4 protocol (TACACS+ uses TCP and RADIUS uses UDP). TACACS+ supports separation of authentication and authorization processes, while RADIUS combines authentication and authorization as one process. RADIUS supports remote access technology, such as 802.1x and SIP; TACACS+ does not."
+    },
+    {
+        "id": 1039,
+        "type": "radio",
+        "question": "What function is provided by the RADIUS protocol?",
+        "image": None,
+        "options": [
+            "RADIUS provides encryption of the complete packet during transfer.",
+            "RADIUS provides separate AAA services.",
+            "RADIUS provides separate ports for authorization and accounting.",
+            "RADIUS provides secure communication using TCP port 49."
+        ],
+        "correct": [2],
+        "explanation": "When an AAA user is authenticated, RADIUS uses UDP port 1645 or 1812 for authentication and UDP port 1646 or 1813 for accounting. TACACS provides separate authorization and accounting services. When a RADIUS client is authenticated, it is also authorized. TACACS provides secure connectivity using TCP port 49. RADIUS hides passwords during transmission and does not encrypt the complete packet."
+    },
+    {
+        "id": 1040,
+        "type": "checkbox",
+        "question": "What are three characteristics of the RADIUS protocol? (Choose three.)",
+        "image": None,
+        "options": [
+            "utilizes TCP port 49",
+            "uses UDP ports for authentication and accounting",
+            "supports 802.1X and SIP",
+            "separates the authentication and authorization processes",
+            "encrypts the entire body of the packet",
+            "is an open RFC standard AAA protocol"
+        ],
+        "correct": [1, 2, 5],
+        "explanation": "RADIUS is an open-standard AAA protocol using UDP port 1645 or 1812 for authentication and UDP port 1646 or 1813 for accounting. It combines authentication and authorization into one process; thus, a password is encrypted for transmission while the rest of the packet will be sent in plain text. RADIUS offers the expedited service and more comprehensive accounting desired by remote-access providers but provides lower security and less potential for customization than TACACS+."
+    },
 ]
