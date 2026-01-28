@@ -153,4 +153,319 @@ questions_real = [
         "correct": [2],
         "explanation": "Email is a top attack vector for security breaches. Cisco ESA includes many threat protection capabilities for email such as spam protection, forged email detection, and Cisco advanced phishing protection."
     },
+    {
+        "id": 1011,
+        "type": "checkbox",
+        "question": "What are two security measures used to protect endpoints in the borderless network? (Choose two.)",
+        "image": None,
+        "options": [
+            "denylisting",
+            "Snort IPS",
+            "DLP",
+            "DMZ",
+            "rootkit"
+        ],
+        "correct": [0, 2],
+        "explanation": "Security measures for endpoints:\n- antimalware software: Protect endpoints from malware.\n- spam filtering: Prevent spam emails from reaching endpoints.\n- blocklisting: Prevent endpoints from connecting to websites with bad reputations by immediately blocking connections based on the latest reputation intelligence.\n- data loss prevention (DLP): Prevent sensitive information from being lost or stolen."
+    },
+    {
+        "id": 1012,
+        "type": "checkbox",
+        "question": "Which three types of traffic are allowed when the authentication port-control auto command has been issued and the client has not yet been authenticated? (Choose three.)",
+        "image": None,
+        "options": [
+            "CDP",
+            "802.1Q",
+            "IPsec",
+            "TACACS+",
+            "STP",
+            "EAPOL"
+        ],
+        "correct": [0, 4, 5],
+        "explanation": "Until the workstation is authenticated, 802.1X access control enables only Extensible Authentication Protocol over LAN (EAPOL), Cisco Discovery Protocol (CDP), and Spanning Tree Protocol (STP) traffic through the port to which the workstation is connected. After authentication succeeds, normal traffic can pass through the port."
+    },
+    {
+        "id": 1013,
+        "type": "radio",
+        "question": "Which statement describes a characteristic of the IKE protocol?",
+        "image": None,
+        "options": [
+            "It uses UDP port 500 to exchange IKE information between the security gateways.",
+            "IKE Phase 1 can be implemented in three different modes: main, aggressive, or quick.",
+            "It allows for the transmission of keys directly across a network.",
+            "The purpose of IKE Phase 2 is to negotiate a security association between two IKE peers."
+        ],
+        "correct": [0],
+        "explanation": "IKE uses UDP port 500 to exchange IKE information between security gateways. Quick mode is part of Phase 2, not Phase 1. Keys are not transmitted directly; they are negotiated using Diffie-Hellman."
+    },
+    {
+        "id": 1014,
+        "type": "radio",
+        "question": "Which action do IPsec peers take during the IKE Phase 2 exchange?",
+        "image": None,
+        "options": [
+            "exchange of DH keys",
+            "negotiation of IPsec policy",
+            "negotiation of IKE policy sets",
+            "verification of peer identity"
+        ],
+        "correct": [1],
+        "explanation": "The IKE protocol executes in two phases. During Phase 1 the two sides negotiate IKE policy sets, authenticate each other, and set up a secure channel. During the second phase IKE negotiates security associations between the peers."
+    },
+    {
+        "id": 1015,
+        "type": "checkbox",
+        "question": "What are two hashing algorithms used with IPsec AH to guarantee authenticity? (Choose two.)",
+        "image": None,
+        "options": [
+            "SHA",
+            "RSA",
+            "DH",
+            "MD5",
+            "AES"
+        ],
+        "correct": [0, 3],
+        "explanation": "The IPsec framework uses various protocols and algorithms to provide data confidentiality, data integrity, authentication, and secure key exchange. Two popular algorithms used to ensure that data is not intercepted and modified (data integrity and authenticity) are MD5 and SHA."
+    },
+    {
+        "id": 1016,
+        "type": "radio",
+        "question": "Which command raises the privilege level of the ping command to 7?",
+        "image": None,
+        "options": [
+            "user exec ping level 7",
+            "authorization exec ping level 7",
+            "accounting exec level 7 ping",
+            "privilege exec level 7 ping"
+        ],
+        "correct": [3],
+        "explanation": "The privilege exec level command is used to change the privilege level of a command. The syntax is: privilege exec level [level] [command]."
+    },
+    {
+        "id": 1017,
+        "type": "radio",
+        "question": "What is a characteristic of a role-based CLI view of router configuration?",
+        "image": None,
+        "options": [
+            "A CLI view has a command hierarchy, with higher and lower views.",
+            "When a superview is deleted, the associated CLI views are deleted.",
+            "A single CLI view can be shared within multiple superviews.",
+            "Only a superview user can configure a new view and add or remove commands from the existing views."
+        ],
+        "correct": [2],
+        "explanation": "A CLI view has no command hierarchy, and therefore, no higher or lower views. Deleting a superview does not delete the associated CLI views. Only a root view user can configure a new view and add or remove commands from the existing views."
+    },
+    {
+        "id": 1018,
+        "type": "radio",
+        "question": "What is a limitation to using OOB management on a large enterprise network?",
+        "image": None,
+        "options": [
+            "Production traffic shares the network with management traffic.",
+            "Terminal servers can have direct console connections to user devices needing management.",
+            "OOB management requires the creation of VPNs.",
+            "All devices appear to be attached to a single management network."
+        ],
+        "correct": [3],
+        "explanation": "OOB management provides a dedicated management network without production traffic. Devices within that network, such as terminal servers, have direct console access for management purposes. Because in-band management runs over the production network, secure tunnels or VPNs may be needed. Failures on the production network may not be communicated to the OOB network administrator because the OOB management network may not be affected."
+    },
+    {
+        "id": 1019,
+        "type": "radio",
+        "question": "Refer to the exhibit. A corporate network is using NTP to synchronize the time across devices. What can be determined from the displayed output?",
+        "image": "/static/images/1019.png",
+        "options": [
+            "Router03 is a stratum 2 device that can provide NTP service to other devices in the network.",
+            "The time on Router03 may not be reliable because it is offset by more than 7 seconds to the time server.",
+            "The interface on Router03 that connects to the time sever has the IPv4 address 209.165.200.225.",
+            "Router03 time is synchronized to a stratum 2 time server."
+        ],
+        "correct": [0],
+        "explanation": "The show ntp status command displays that Router03 is now a stratum 2 device synchronized with the NTP server at 209.165.220.225 and can provide NTP service to other devices in the network. The clock offset is only 7.0883 milliseconds, not 7.0883 seconds."
+    },
+    {
+        "id": 1020,
+        "type": "checkbox",
+        "question": "Refer to the exhibit. Which two conclusions can be drawn from the syslog message that was generated by the router? (Choose two.)",
+        "image": "/static/images/1020.jpg",
+        "options": [
+            "This message resulted from an unusual error requiring reconfiguration of the interface.",
+            "This message indicates that service timestamps have been configured.",
+            "This message indicates that the interface changed state five times.",
+            "This message is a level 5 notification message.",
+            "This message indicates that the interface should be replaced."
+        ],
+        "correct": [1, 3],
+        "explanation": "The message is a level 5 notification message as shown in the %LINEPROTO-5 section of the output. Messages reporting the link status are common and do not require replacing the interface or reconfiguring the interface. The date and time displayed at the beginning of the message indicates that service timestamps have been configured on the router."
+    },
+    {
+        "id": 1021,
+        "type": "checkbox",
+        "question": "Which two types of hackers are typically classified as grey hat hackers? (Choose two.)",
+        "image": None,
+        "options": [
+            "hacktivists",
+            "cyber criminals",
+            "vulnerability brokers",
+            "script kiddies",
+            "state-sponsored hackers"
+        ],
+        "correct": [0, 2],
+        "explanation": "Grey hat hackers may do unethical or illegal things, but not for personal gain or to cause damage. Hacktivists use their hacking as a form of political or social protest, and vulnerability brokers hack to uncover weaknesses and report them to vendors. Depending on the perspective one possesses, state-sponsored hackers are either white hat or black hat operators. Script kiddies create hacking scripts to cause damage or disruption. Cyber criminals use hacking to obtain financial gain by illegal means."
+    },
+    {
+        "id": 1022,
+        "type": "radio",
+        "question": "When describing malware, what is a difference between a virus and a worm?",
+        "image": None,
+        "options": [
+            "A virus focuses on gaining privileged access to a device, whereas a worm does not.",
+            "A virus replicates itself by attaching to another file, whereas a worm can replicate itself independently.",
+            "A virus can be used to launch a DoS attack (but not a DDoS), but a worm can be used to launch both DoS and DDoS attacks.",
+            "A virus can be used to deliver advertisements without user consent, whereas a worm cannot."
+        ],
+        "correct": [1],
+        "explanation": "Malware can be classified as follows:\n- Virus (self-replicates by attaching to another program or file)\n- Worm (replicates independently of another program)\n- Trojan horse (masquerades as a legitimate file or program)\n- Rootkit (gains privileged access to a machine while concealing itself)\n- Spyware (collects information from a target system)\n- Adware (delivers advertisements with or without consent)\n- Bot (waits for commands from the hacker)\n- Ransomware (holds a computer system or data captive until payment is received)"
+    },
+    {
+        "id": 1023,
+        "type": "radio",
+        "question": "Which type of packet is unable to be filtered by an outbound ACL?",
+        "image": None,
+        "options": [
+            "multicast packet",
+            "ICMP packet",
+            "broadcast packet",
+            "router-generated packet"
+        ],
+        "correct": [3],
+        "explanation": "Traffic that originates within a router such as pings from a command prompt, remote access from a router to another device, or routing updates are not affected by outbound access lists. The traffic must flow through the router in order for the router to apply the ACEs."
+    },
+    {
+        "id": 1024,
+        "type": "radio",
+        "question": "Consider the access list command applied outbound on a router serial interface.\n\naccess-list 100 deny icmp 192.168.10.0 0.0.0.255 any echo reply\n\nWhat is the effect of applying this access list command?",
+        "image": None,
+        "options": [
+            "The only traffic denied is echo-replies sourced from the 192.168.10.0/24 network. All other traffic is allowed.",
+            "The only traffic denied is ICMP-based traffic. All other traffic is allowed.",
+            "No traffic will be allowed outbound on the serial interface.",
+            "Users on the 192.168.10.0/24 network are not allowed to transmit traffic to any other destination."
+        ],
+        "correct": [2],
+        "explanation": "This ACL denies ICMP echo-replies from the 192.168.10.0/24 network. However, because there is an implicit deny all at the end of every ACL, and no permit statement is included, no traffic will be allowed outbound on the serial interface."
+    },
+    {
+        "id": 1025,
+        "type": "radio",
+        "question": "Which command is used to activate an IPv6 ACL named ENG_ACL on an interface so that the router filters traffic prior to accessing the routing table?",
+        "image": None,
+        "options": [
+            "ipv6 access-class ENG_ACL in",
+            "ipv6 traffic-filter ENG_ACL out",
+            "ipv6 traffic-filter ENG_ACL in",
+            "ipv6 access-class ENG_ACL out"
+        ],
+        "correct": [2],
+        "explanation": "For the purpose of applying an access list to a particular interface, the ipv6 traffic-filter IPv6 command is equivalent to the access-group IPv4 command. The direction in which the traffic is examined (in or out) is also required."
+    },
+    {
+        "id": 1026,
+        "type": "radio",
+        "question": "What technology has a function of using trusted third-party protocols to issue credentials that are accepted as an authoritative identity?",
+        "image": None,
+        "options": [
+            "digital signatures",
+            "hashing algorithms",
+            "PKI certificates",
+            "symmetric keys"
+        ],
+        "correct": [2],
+        "explanation": "Digital certificates are used to prove the authenticity and integrity of PKI certificates, but a PKI Certificate Authority is a trusted third-party entity that issues PKI certificates. PKI certificates are public information and are used to provide authenticity, confidentiality, integrity, and nonrepudiation services that can scale to large requirements."
+    },
+    {
+        "id": 1027,
+        "type": "checkbox",
+        "question": "What are two methods to maintain certificate revocation status? (Choose two.)",
+        "image": None,
+        "options": [
+            "subordinate CA",
+            "OCSP",
+            "DNS",
+            "LDAP",
+            "CRL"
+        ],
+        "correct": [1, 4],
+        "explanation": "A digital certificate might need to be revoked if its key is compromised or it is no longer needed. The certificate revocation list (CRL) and Online Certificate Status Protocol (OCSP), are two common methods to check a certificate revocation status."
+    },
+    {
+        "id": 1028,
+        "type": "radio",
+        "question": "Which protocol is an IETF standard that defines the PKI digital certificate format?",
+        "image": None,
+        "options": [
+            "SSL/TLS",
+            "X.500",
+            "LDAP",
+            "X.509"
+        ],
+        "correct": [3],
+        "explanation": "To address the interoperability of different PKI vendors, IETF published the Internet X.509 Public Key Infrastructure Certificate Policy and Certification Practices Framework (RFC 2527). The standard defines the format of a digital certificate."
+    },
+    {
+        "id": 1029,
+        "type": "radio",
+        "question": "A network administrator is configuring DAI on a switch. Which command should be used on the uplink interface that connects to a router?",
+        "image": None,
+        "options": [
+            "ip arp inspection trust",
+            "ip dhcp snooping",
+            "ip arp inspection vlan",
+            "spanning-tree portfast"
+        ],
+        "correct": [0],
+        "explanation": "In general, a router serves as the default gateway for the LAN or VLAN on the switch. Therefore, the uplink interface that connects to a router should be a trusted port for forwarding ARP requests."
+    },
+    {
+        "id": 1030,
+        "type": "radio",
+        "question": "What is the best way to prevent a VLAN hopping attack?",
+        "image": None,
+        "options": [
+            "Disable trunk negotiation for trunk ports and statically set nontrunk ports as access ports.",
+            "Disable STP on all nontrunk ports.",
+            "Use VLAN 1 as the native VLAN on trunk ports.",
+            "Use ISL encapsulation on all trunk links."
+        ],
+        "correct": [0],
+        "explanation": "VLAN hopping attacks rely on the attacker being able to create a trunk link with a switch. Disabling DTP and configuring user-facing ports as static access ports can help prevent these types of attacks. Disabling the Spanning Tree Protocol (STP) will not eliminate VLAN hopping attacks."
+    },
+    {
+        "id": 1031,
+        "type": "radio",
+        "question": "What would be the primary reason an attacker would launch a MAC address overflow attack?",
+        "image": None,
+        "options": [
+            "so that the switch stops forwarding traffic",
+            "so that legitimate hosts cannot obtain a MAC address",
+            "so that the attacker can see frames that are destined for other hosts",
+            "so that the attacker can execute arbitrary code on the switch"
+        ],
+        "correct": [2],
+        "explanation": "A MAC address overflow attack floods the switch with fake MAC addresses to fill the CAM table. When the table is full, the switch can no longer learn new MAC addresses and starts flooding traffic out all ports, allowing the attacker to see frames destined for other hosts."
+    },
+    {
+        "id": 1032,
+        "type": "radio",
+        "question": "What is the main difference between the implementation of IDS and IPS devices?",
+        "image": None,
+        "options": [
+            "An IDS can negatively impact the packet flow, whereas an IPS can not.",
+            "An IDS needs to be deployed together with a firewall device, whereas an IPS can replace a firewall.",
+            "An IDS would allow malicious traffic to pass before it is addressed, whereas an IPS stops it immediately.",
+            "An IDS uses signature-based technology to detect malicious packets, whereas an IPS uses profile-based technology."
+        ],
+        "correct": [2],
+        "explanation": "An IPS is deployed in inline mode and will not allow malicious traffic to enter the internal network without first analyzing it. An advantage of this is that it can stop an attack immediately. An IDS is deployed in promiscuous mode. It copies the traffic patterns and analyzes them offline, thus it cannot stop the attack immediately and it relies on another device to take further actions once it detects an attack. Being deployed in inline mode, an IPS can negatively impact the traffic flow. Both IDS and IPS can use signature-based technology to detect malicious packets. An IPS cannot replace other security devices, such as firewalls, because they perform different tasks."
+    },
 ]
