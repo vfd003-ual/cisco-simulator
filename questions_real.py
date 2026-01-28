@@ -599,4 +599,64 @@ questions_real = [
         "correct": [1, 2, 5],
         "explanation": "RADIUS is an open-standard AAA protocol using UDP port 1645 or 1812 for authentication and UDP port 1646 or 1813 for accounting. It combines authentication and authorization into one process; thus, a password is encrypted for transmission while the rest of the packet will be sent in plain text. RADIUS offers the expedited service and more comprehensive accounting desired by remote-access providers but provides lower security and less potential for customization than TACACS+."
     },
+    {
+        "id": 1041,
+        "type": "radio",
+        "question": "Which zone-based policy firewall zone is system-defined and applies to traffic destined for the router or originating from the router?",
+        "image": None,
+        "options": [
+            "local zone",
+            "inside zone",
+            "self zone",
+            "system zone",
+            "outside zone"
+        ],
+        "correct": [2],
+        "explanation": "Zone-based policy firewalls typically have the private (internal or trusted) zone, the public (external or untrusted) zone, and the default self zone, which does not require any interfaces. The private or internal zone is commonly used for internal LANs. The public zone would include the interfaces that connect to an external (outside the business) interface."
+    },
+    {
+        "id": 1042,
+        "type": "checkbox",
+        "question": "What are two benefits of using a ZPF rather than a Classic Firewall? (Choose two.)",
+        "image": None,
+        "options": [
+            "ZPF allows interfaces to be placed into zones for IP inspection.",
+            "The ZPF is not dependent on ACLs.",
+            "Multiple inspection actions are used with ZPF.",
+            "ZPF policies are easy to read and troubleshoot.",
+            "With ZPF, the router will allow packets unless they are explicitly blocked."
+        ],
+        "correct": [1, 3],
+        "explanation": "There are several benefits of a ZPF:\n- It is not dependent on ACLs.\n- The router security posture is to block unless explicitly allowed.\n- Policies are easy to read and troubleshoot with C3PL.\n- One policy affects any given traffic, instead of needing multiple ACLs and inspection actions.\n\nIn addition, an interface cannot be simultaneously configured as a security zone member and for IP inspection."
+    },
+    {
+        "id": 1043,
+        "type": "ordering",
+        "question": "Place the steps for configuring zone-based policy (ZPF) firewalls in order from first to last. (Not all options are used.)",
+        "image": None,
+        "options": [
+            "Apply policies.",
+            "Assign zones to interfaces.",
+            "Create access lists.",
+            "Create policies.",
+            "Create zones.",
+            "Define traffic classes."
+        ],
+        "correct": [4, 5, 3, 0, 1],
+        "explanation": "The correct order for configuring ZPF firewalls is:\n1st - Create zones.\n2nd - Define traffic classes.\n3rd - Create policies.\n4th - Apply policies.\n5th - Assign zones to interfaces.\n\n'Create access lists' is not used in this process."
+    },
+    {
+        "id": 1044,
+        "type": "radio",
+        "question": "How does a firewall handle traffic when it is originating from the private network and traveling to the DMZ network? (SOSPECHOSA)",
+        "image": None,
+        "options": [
+            "The traffic is selectively denied based on service requirements.",
+            "The traffic is usually permitted with little or no restrictions.",
+            "The traffic is selectively permitted and inspected.",
+            "The traffic is usually blocked."
+        ],
+        "correct": [1],
+        "explanation": "Traffic originating from the private network is inspected as it travels toward the public or DMZ network. This traffic is permitted with little or no restriction. Inspected traffic returning from the DMZ or public network to the private network is permitted.(TAMBIÉN PUEDE SER LA OPCIÓN 3: The traffic is selectively permitted and inspected.)"
+    },
 ]
