@@ -879,4 +879,894 @@ questions_real = [
         "correct": [0, 1],
         "explanation": "Using an intrusion prevention system (IPS) and firewall can limit the information that can be discovered with a port scanner. Authentication, encryption, and passwords provide no protection from loss of information from port scanning."
     },
+    {
+        "id": 1060,
+        "type": "radio",
+        "question": "An administrator discovers that a user is accessing a newly established website that may be detrimental to company security. What action should the administrator take first in terms of the security policy?",
+        "image": None,
+        "options": [
+            "Ask the user to stop immediately and inform the user that this constitutes grounds for dismissal.",
+            "Create a firewall rule blocking the respective website.",
+            "Revise the AUP immediately and get all users to sign the updated AUP.",
+            "Immediately suspend the network privileges of the user."
+        ],
+        "correct": [2],
+        "explanation": "The first action should be to revise the Acceptable Use Policy (AUP) to address the newly established website and ensure all users sign the updated policy. This establishes a clear policy framework before taking punitive actions against users."
+    },
+    {
+        "id": 1061,
+        "type": "checkbox",
+        "question": "If AAA is already enabled, which three CLI steps are required to configure a router with a specific view? (Choose three.)",
+        "image": None,
+        "options": [
+            "Create a superview using the parser view view-name command.",
+            "Associate the view with the root view.",
+            "Assign users who can use the view.",
+            "Create a view using the parser view command.",
+            "Assign a secret password to the view.",
+            "Assign commands to the view."
+        ],
+        "correct": [3, 4, 5],
+        "explanation": "There are five steps involved to create a view on a Cisco router:\n1) AAA must be enabled.\n2) the view must be created.\n3) a secret password must be assigned to the view.\n4) commands must be assigned to the view.\n5) view configuration mode must be exited."
+    },
+    {
+        "id": 1062,
+        "type": "radio",
+        "question": "Refer to the exhibit. A network administrator configures a named ACL on the router. Why is there no output displayed when the show command is issued?",
+        "image": "/static/images/1062.png",
+        "options": [
+            "The ACL is not activated.",
+            "The ACL name is case sensitive.",
+            "The ACL has not been applied to an interface.",
+            "No packets have matched the ACL statements yet."
+        ],
+        "correct": [1],
+        "explanation": "ACL names are case sensitive. The show command must use the exact case as the ACL was created."
+    },
+    {
+        "id": 1063,
+        "type": "checkbox",
+        "question": "ACLs are used primarily to filter traffic. What are two additional uses of ACLs? (Choose two.)",
+        "image": None,
+        "options": [
+            "specifying internal hosts for NAT",
+            "identifying traffic for QoS",
+            "specifying source addresses for authentication",
+            "reorganizing traffic into VLANs",
+            "filtering VTP packets"
+        ],
+        "correct": [0, 1],
+        "explanation": "ACLs are used to filter traffic to determine which packets will be permitted or denied through the router and which packets will be subject to policy-based routing. ACLs can also be used to identify traffic that requires NAT and QoS services. Prefix lists are used to control which routes will be redistributed or advertised to other routers."
+    },
+    {
+        "id": 1064,
+        "type": "checkbox",
+        "question": "What two features are added in SNMPv3 to address the weaknesses of previous versions of SNMP? (Choose two.)",
+        "image": None,
+        "options": [
+            "authentication",
+            "authorization with community string priority",
+            "bulk MIB objects retrieval",
+            "ACL management filtering",
+            "encryption"
+        ],
+        "correct": [0, 4],
+        "explanation": "SNMPv3 adds authentication and encryption to address the security weaknesses of previous SNMP versions."
+    },
+    {
+        "id": 1065,
+        "type": "radio",
+        "question": "What network testing tool is used for password auditing and recovery?",
+        "image": None,
+        "options": [
+            "Nessus",
+            "Metasploit",
+            "L0phtcrack",
+            "SuperScan"
+        ],
+        "correct": [2],
+        "explanation": "The Nessus tool provides remote vulnerability scanning that focuses on remote access, password misconfiguration, and DoS against the TCP/IP stack. L0phtcrack provides password auditing and recovery. Metasploit provides information about vulnerabilities and aids in penetration testing and IDS signature development."
+    },
+    {
+        "id": 1066,
+        "type": "radio",
+        "question": "Which type of firewall makes use of a server to connect to destination devices on behalf of clients?",
+        "image": None,
+        "options": [
+            "packet filtering firewall",
+            "proxy firewall",
+            "stateless firewall",
+            "stateful firewall"
+        ],
+        "correct": [1],
+        "explanation": "An application gateway firewall, also called a proxy firewall, filters information at Layers 3, 4, 5, and 7 of the OSI model. It uses a proxy server to connect to remote servers on behalf of clients. Remote servers will see only a connection from the proxy server, not from the individual clients."
+    },
+    {
+        "id": 1067,
+        "type": "radio",
+        "question": "Refer to the exhibit. What will be displayed in the output of the show running-config object command after the exhibited configuration commands are entered on an ASA 5506-X?",
+        "image": "/static/images/1067.jpg",
+        "options": [
+            "host 192.168.1.4",
+            "range 192.168.1.10 192.168.1.20",
+            "host 192.168.1.3, host 192.168.1.4, and range 192.168.1.10 192.168.1.20",
+            "host 192.168.1.3",
+            "host 192.168.1.3 and host 192.168.1.4",
+            "host 192.168.1.4 and range 192.168.1.10 192.168.1.20"
+        ],
+        "correct": [1],
+        "explanation": "The show running-config object command is used to display or verify the IP address/mask pair within the object. There can only be one statement in the network object. Entering a second IP address/mask pair will replace the existing configuration."
+    },
+    {
+        "id": 1068,
+        "type": "checkbox",
+        "question": "Refer to the exhibit. According to the command output, which three statements are true about the DHCP options entered on the ASA? (Choose three.)",
+        "image": "/static/images/1068.jpg",
+        "options": [
+            "The dhcpd address [ start-of-pool ]-[ end-of-pool ] inside command was issued to enable the DHCP server.",
+            "The dhcpd address [ start-of-pool ]-[ end-of-pool ] inside command was issued to enable the DHCP client.",
+            "The dhcpd enable inside command was issued to enable the DHCP server.",
+            "The dhcpd auto-config outside command was issued to enable the DHCP client.",
+            "The dhcpd auto-config outside command was issued to enable the DHCP server.",
+            "The dhcpd enable inside command was issued to enable the DHCP client."
+        ],
+        "correct": [0, 2, 3],
+        "explanation": "The dhcpd address command configures the DHCP address pool, the dhcpd enable inside command enables the DHCP server on the inside interface, and the dhcpd auto-config outside command enables the DHCP client on the outside interface."
+    },
+    {
+        "id": 1069,
+        "type": "checkbox",
+        "question": "Which two statements describe the characteristics of symmetric algorithms? (Choose two.)",
+        "image": None,
+        "options": [
+            "They are commonly used with VPN traffic.",
+            "They use a pair of a public key and a private key.",
+            "They are commonly implemented in the SSL and SSH protocols.",
+            "They provide confidentiality, integrity, and availability.",
+            "They are referred to as a pre-shared key or secret key."
+        ],
+        "correct": [0, 4],
+        "explanation": "Symmetric encryption algorithms use the same key (also called shared secret) to encrypt and decrypt the data. In contrast, asymmetric encryption algorithms use a pair of keys, one for encryption and another for decryption."
+    },
+    {
+        "id": 1070,
+        "type": "radio",
+        "question": "A web server administrator is configuring access settings to require users to authenticate first before accessing certain web pages. Which requirement of information security is addressed through the configuration?",
+        "image": None,
+        "options": [
+            "availability",
+            "integrity",
+            "scalability",
+            "confidentiality"
+        ],
+        "correct": [3],
+        "explanation": "Confidentiality ensures that data is accessed only by authorized individuals. Authentication will help verify the identity of the individuals."
+    },
+    {
+        "id": 1071,
+        "type": "radio",
+        "question": "The use of 3DES within the IPsec framework is an example of which of the five IPsec building blocks?",
+        "image": None,
+        "options": [
+            "authentication",
+            "nonrepudiation",
+            "integrity",
+            "Diffie-Hellman",
+            "confidentiality"
+        ],
+        "correct": [4],
+        "explanation": "The IPsec framework consists of five building blocks. Each building block performs a specific security function via specific protocols. The function of providing confidentiality is provided by protocols such as DES, 3DES, and AES."
+    },
+    {
+        "id": 1072,
+        "type": "radio",
+        "question": "What function is provided by Snort as part of the Security Onion?",
+        "image": None,
+        "options": [
+            "to generate network intrusion alerts by the use of rules and signatures",
+            "to normalize logs from various NSM data logs so they can be represented, stored, and accessed through a common schema",
+            "to display full-packet captures for analysis",
+            "to view pcap transcripts generated by intrusion detection tools"
+        ],
+        "correct": [0],
+        "explanation": "Snort is a NIDS integrated into Security Onion. It is an important source of the alert data that is indexed in the Sguil analysis tool. Snort uses rules and signatures to generate alerts."
+    },
+    {
+        "id": 1073,
+        "type": "checkbox",
+        "question": "What are two drawbacks to using HIPS? (Choose two.)",
+        "image": None,
+        "options": [
+            "With HIPS, the success or failure of an attack cannot be readily determined.",
+            "With HIPS, the network administrator must verify support for all the different operating systems used in the network.",
+            "HIPS has difficulty constructing an accurate network picture or coordinating events that occur across the entire network.",
+            "If the network traffic stream is encrypted, HIPS is unable to access unencrypted forms of the traffic.",
+            "HIPS installations are vulnerable to fragmentation attacks or variable TTL attacks."
+        ],
+        "correct": [1, 2],
+        "explanation": "Two disadvantages of deploying HIPS are (1) that it cannot create a complete view of the network or have knowledge of events that might be occurring beyond an individual host and (2) every host operating system within the organization must be supported. However, an advantage of using HIPS is that it can monitor and protect the operating system as well as critical system processes on each network host."
+    },
+    {
+        "id": 1074,
+        "type": "radio",
+        "question": "In an AAA-enabled network, a user issues the configure terminal command from the privileged executive mode of operation. What AAA function is at work if this command is rejected?",
+        "image": None,
+        "options": [
+            "authorization",
+            "authentication",
+            "auditing",
+            "accounting"
+        ],
+        "correct": [0],
+        "explanation": "Authentication must ensure that devices or end users are legitimate. Authorization is concerned with allowing and disallowing authenticated users access to certain areas and programs on the network. The configure terminal command is rejected because the user is not authorized to execute the command."
+    },
+    {
+        "id": 1075,
+        "type": "radio",
+        "question": "A company has a file server that shares a folder named Public. The network security policy specifies that the Public folder is assigned Read-Only rights to anyone who can log into the server while the Edit rights are assigned only to the network admin group. Which component is addressed in the AAA network service framework?",
+        "image": None,
+        "options": [
+            "automation",
+            "accounting",
+            "authentication",
+            "authorization"
+        ],
+        "correct": [3],
+        "explanation": "After a user is successfully authenticated (logged into the server), the authorization is the process of determining what network resources the user can access and what operations (such as read or edit) the user can perform."
+    },
+    {
+        "id": 1076,
+        "type": "radio",
+        "question": "What is a characteristic of a DMZ zone?",
+        "image": None,
+        "options": [
+            "Traffic originating from the inside network going to the DMZ network is not permitted.",
+            "Traffic originating from the outside network going to the DMZ network is selectively permitted.",
+            "Traffic originating from the DMZ network going to the inside network is permitted.",
+            "Traffic originating from the inside network going to the DMZ network is selectively permitted."
+        ],
+        "correct": [1],
+        "explanation": "The characteristics of a DMZ zone are as follows:\n- Traffic originating from the inside network going to the DMZ network is permitted.\n- Traffic originating from the outside network going to the DMZ network is selectively permitted.\n- Traffic originating from the DMZ network going to the inside network is denied."
+    },
+    {
+        "id": 1077,
+        "type": "radio",
+        "question": "Which measure can a security analyst take to perform effective security monitoring against network traffic encrypted by SSL technology?",
+        "image": None,
+        "options": [
+            "Use a Syslog server to capture network traffic.",
+            "Deploy a Cisco SSL Appliance.",
+            "Require remote access connections through IPsec VPN.",
+            "Deploy a Cisco ASA."
+        ],
+        "correct": [1],
+        "explanation": "Deploy a Cisco SSL Appliance to decrypt SSL traffic and send it to intrusion prevention system (IPS) appliances to identify risks normally hidden by SSL."
+    },
+    {
+        "id": 1078,
+        "type": "radio",
+        "question": "Refer to the exhibit. Port security has been configured on the Fa 0/12 interface of switch S1. What action will occur when PC1 is attached to switch S1 with the applied configuration?",
+        "image": "/static/images/1078.png",
+        "options": [
+            "Frames from PC1 will be forwarded since the switchport port-security violation command is missing.",
+            "Frames from PC1 will be forwarded to its destination, and a log entry will be created.",
+            "Frames from PC1 will be forwarded to its destination, but a log entry will not be created.",
+            "Frames from PC1 will cause the interface to shut down immediately, and a log entry will be made.",
+            "Frames from PC1 will be dropped, and there will be no log of the violation.",
+            "Frames from PC1 will be dropped, and a log message will be created."
+        ],
+        "correct": [3],
+        "explanation": "Manual configuration of the single allowed MAC address has been entered for port fa0/12. PC1 has a different MAC address and when attached will cause the port to shut down (the default action), a log message to be automatically created, and the violation counter to increment. The default action of shutdown is recommended because the restrict option might fail if an attack is underway."
+    },
+    {
+        "id": 1079,
+        "type": "radio",
+        "question": "What security countermeasure is effective for preventing CAM table overflow attacks?",
+        "image": None,
+        "options": [
+            "DHCP snooping",
+            "Dynamic ARP Inspection",
+            "IP source guard",
+            "port security"
+        ],
+        "correct": [3],
+        "explanation": "Port security is the most effective method for preventing CAM table overflow attacks. Port security gives an administrator the ability to manually specify what MAC addresses should be seen on given switch ports. It provides a method for limiting the number of MAC addresses that can be dynamically learned over a switch port."
+    },
+    {
+        "id": 1080,
+        "type": "checkbox",
+        "question": "What are two examples of DoS attacks? (Choose two.)",
+        "image": None,
+        "options": [
+            "port scanning",
+            "SQL injection",
+            "ping of death",
+            "phishing",
+            "buffer overflow"
+        ],
+        "correct": [2, 4],
+        "explanation": "The buffer overflow and ping of death DoS attacks exploit system memory-related flaws on a server by sending an unexpected amount of data or malformed data to the server."
+    },
+    {
+        "id": 1081,
+        "type": "radio",
+        "question": "Which method is used to identify interesting traffic needed to create an IKE phase 1 tunnel?",
+        "image": None,
+        "options": [
+            "transform sets",
+            "a permit access list entry",
+            "hashing algorithms",
+            "a security association"
+        ],
+        "correct": [1],
+        "explanation": "A permit access list entry is used to identify interesting traffic that triggers the creation of an IKE Phase 1 tunnel."
+    },
+    {
+        "id": 1082,
+        "type": "checkbox",
+        "question": "When the CLI is used to configure an ISR for a site-to-site VPN connection, which two items must be specified to enable a crypto map policy? (Choose two.)",
+        "image": None,
+        "options": [
+            "the hash",
+            "the peer",
+            "encryption",
+            "the ISAKMP policy",
+            "a valid access list",
+            "IP addresses on all active interfaces",
+            "the IKE Phase 1 policy"
+        ],
+        "correct": [1, 4],
+        "explanation": "After the crypto map command in global configuration mode has been issued, the new crypto map will remain disabled until a peer and a valid access list have been configured."
+    },
+    {
+        "id": 1083,
+        "type": "radio",
+        "question": "How does a firewall handle traffic when it is originating from the public network and traveling to the DMZ network?",
+        "image": None,
+        "options": [
+            "Traffic that is originating from the public network is inspected and selectively permitted when traveling to the DMZ network.",
+            "Traffic that is originating from the public network is usually permitted with little or no restriction when traveling to the DMZ network.",
+            "Traffic that is originating from the public network is usually forwarded without inspection when traveling to the DMZ network.",
+            "Traffic that is originating from the public network is usually blocked when traveling to the DMZ network."
+        ],
+        "correct": [0],
+        "explanation": "Traffic originating from the public network and traveling toward the DMZ is selectively permitted and inspected. This type of traffic is typically email, DNS, HTTP, or HTTPS traffic. Return traffic from the DMZ to the public network is dynamically permitted."
+    },
+    {
+        "id": 1084,
+        "type": "radio",
+        "question": "A client connects to a Web server. Which component of this HTTP connection is not examined by a stateful firewall?",
+        "image": None,
+        "options": [
+            "the source IP address of the client traffic",
+            "the destination port number of the client traffic",
+            "the actual contents of the HTTP connection",
+            "the source port number of the client traffic"
+        ],
+        "correct": [2],
+        "explanation": "Stateful firewalls cannot prevent application layer attacks because they do not examine the actual contents of the HTTP connection."
+    },
+    {
+        "id": 1085,
+        "type": "radio",
+        "question": "Which network monitoring technology uses VLANs to monitor traffic on remote switches?",
+        "image": None,
+        "options": [
+            "IPS",
+            "IDS",
+            "TAP",
+            "RSPAN"
+        ],
+        "correct": [3],
+        "explanation": "Remote SPAN (RSPAN) enables a network administrator to use the flexibility of VLANs to monitor traffic on remote switches."
+    },
+    {
+        "id": 1086,
+        "type": "radio",
+        "question": "Which rule action will cause Snort IPS to block and log a packet?",
+        "image": None,
+        "options": [
+            "log",
+            "drop",
+            "alert",
+            "Sdrop"
+        ],
+        "correct": [1],
+        "explanation": "Snort IPS mode can perform all the IDS actions plus the following:\n- Drop – Block and log the packet.\n- Reject – Block the packet, log it, and then send a TCP reset if the protocol is TCP or an ICMP port unreachable message if the protocol is UDP.\n- Sdrop – Block the packet but do not log it."
+    },
+    {
+        "id": 1087,
+        "type": "radio",
+        "question": "What is typically used to create a security trap in the data center facility?",
+        "image": None,
+        "options": [
+            "IDs, biometrics, and two access doors",
+            "high resolution monitors",
+            "redundant authentication servers",
+            "a server without all security patches applied"
+        ],
+        "correct": [0],
+        "explanation": "Security traps provide access to the data halls where data center data is stored. A security trap is similar to an air lock. A person must first enter the security trap using their badge ID proximity card. After the person is inside the security trap, facial recognition, fingerprints, or other biometric verifications are used to open the second door. The user must repeat the process to exit the data hall."
+    },
+    {
+        "id": 1088,
+        "type": "radio",
+        "question": "A company is concerned with leaked and stolen corporate data on hard copies. Which data loss mitigation technique could help with this situation?",
+        "image": None,
+        "options": [
+            "strong PC security settings",
+            "strong passwords",
+            "shredding",
+            "encryption"
+        ],
+        "correct": [2],
+        "explanation": "Confidential data should be shredded when no longer required. Otherwise, a thief could retrieve discarded reports and gain valuable information."
+    },
+    {
+        "id": 1089,
+        "type": "radio",
+        "question": "Upon completion of a network security course, a student decides to pursue a career in cryptanalysis. What job would the student be doing as a cryptanalyst?",
+        "image": None,
+        "options": [
+            "cracking code without access to the shared secret key",
+            "creating hashing codes to authenticate data",
+            "making and breaking secret codes",
+            "creating transposition and substitution ciphers"
+        ],
+        "correct": [0],
+        "explanation": "Cryptanalysis is the practice and study of determining the meaning of encrypted information (cracking the code), without access to the shared secret key. This is also known as codebreaking."
+    },
+    {
+        "id": 1090,
+        "type": "radio",
+        "question": "What command is used on a switch to set the port access entity type so the interface acts only as an authenticator and will not respond to any messages meant for a supplicant?",
+        "image": None,
+        "options": [
+            "dot1x pae authenticator",
+            "authentication port-control auto",
+            "aaa authentication dot1x default group radius",
+            "dot1x system-auth-control"
+        ],
+        "correct": [0],
+        "explanation": "Sets the Port Access Entity (PAE) type.\ndot1x pae [supplicant | authenticator | both]\n\n- supplicant—The interface acts only as a supplicant and does not respond to messages that are meant for an authenticator.\n- authenticator—The interface acts only as an authenticator and does not respond to any messages meant for a supplicant.\n- both—The interface behaves both as a supplicant and as an authenticator and thus does respond to all dot1x messages."
+    },
+    {
+        "id": 1091,
+        "type": "checkbox",
+        "question": "What are two disadvantages of using an IDS? (Choose two.)",
+        "image": None,
+        "options": [
+            "The IDS does not stop malicious traffic.",
+            "The IDS works offline using copies of network traffic.",
+            "The IDS has no impact on traffic.",
+            "The IDS analyzes actual forwarded packets.",
+            "The IDS requires other devices to respond to attacks."
+        ],
+        "correct": [0, 4],
+        "explanation": "The disadvantage of operating with mirrored traffic is that the IDS cannot stop malicious single-packet attacks from reaching the target before responding to the attack. Also, an IDS often requires assistance from other networking devices, such as routers and firewalls, to respond to an attack. An advantage of an IDS is that by working offline using mirrored traffic, it has no impact on traffic flow."
+    },
+    {
+        "id": 1092,
+        "type": "radio",
+        "question": "Refer to the exhibit. The ip verify source command is applied on untrusted interfaces. Which type of attack is mitigated by using this configuration?",
+        "image": "/static/images/1092.jpg",
+        "options": [
+            "DHCP spoofing",
+            "DHCP starvation",
+            "STP manipulation",
+            "MAC and IP address spoofing"
+        ],
+        "correct": [3],
+        "explanation": "To protect against MAC and IP address spoofing, apply the IP Source Guard security feature, using the ip verify source command, on untrusted ports."
+    },
+    {
+        "id": 1093,
+        "type": "radio",
+        "question": "What ports can receive forwarded traffic from an isolated port that is part of a PVLAN?",
+        "image": None,
+        "options": [
+            "other isolated ports and community ports",
+            "only promiscuous ports",
+            "all other ports within the same community",
+            "only isolated ports"
+        ],
+        "correct": [1],
+        "explanation": "PVLANs are used to provide Layer 2 isolation between ports within the same broadcast domain. The level of isolation can be specified with three types of PVLAN ports:\n- Promiscuous ports that can forward traffic to all other ports\n- Isolated ports that can only forward traffic to promiscuous ports\n- Community ports that can forward traffic to other community ports and promiscuous ports"
+    },
+    {
+        "id": 1094,
+        "type": "radio",
+        "question": "A user complains about being locked out of a device after too many unsuccessful AAA login attempts. What could be used by the network administrator to provide a secure authentication access method without locking a user out of a device?",
+        "image": None,
+        "options": [
+            "Use the login delay command for authentication attempts.",
+            "Use the login local command for authenticating user access.",
+            "Use the aaa local authentication attempts max-fail global configuration mode command with a higher number of acceptable failures.",
+            "Use the none keyword when configuring the authentication method list."
+        ],
+        "correct": [0],
+        "explanation": "The login delay command introduces a delay between failed login attempts without locking the account. This provides a user with unlimited attempts at accessing a device without causing the user account to become locked and thus requiring administrator intervention."
+    },
+    {
+        "id": 1095,
+        "type": "checkbox",
+        "question": "What are two drawbacks in assigning user privilege levels on a Cisco router? (Choose two.)",
+        "image": None,
+        "options": [
+            "Only a root user can add or remove commands.",
+            "Privilege levels must be set to permit access control to specific device interfaces, ports, or slots.",
+            "Assigning a command with multiple keywords allows access to all commands using those keywords.",
+            "Commands from a lower level are always executable at a higher level.",
+            "AAA must be enabled."
+        ],
+        "correct": [2, 3],
+        "explanation": "Privilege levels may not provide desired flexibility and specificity because higher levels always inherit commands from lower levels, and commands with multiple keywords give the user access to all commands available for each keyword. Privilege levels cannot specify access control to interfaces, ports, or slots. AAA is not required to set privilege levels, but is required in order to create role-based views. The role of root user does not exist in privilege levels."
+    },
+    {
+        "id": 1096,
+        "type": "radio",
+        "question": "Refer to the exhibit. Which conclusion can be made from the show crypto map command output that is shown on R1?",
+        "image": "/static/images/1096.jpg",
+        "options": [
+            "The crypto map has not yet been applied to an interface.",
+            "The current peer IP address should be 172.30.2.1.",
+            "There is a mismatch between the transform sets.",
+            "The tunnel configuration was established and can be tested with extended pings."
+        ],
+        "correct": [0],
+        "explanation": "According to the show crypto map command output, all required SAs are in place, but no interface is currently using the crypto map. To complete the tunnel configuration, the crypto map has to be applied to the outbound interface of each router."
+    },
+    {
+        "id": 1097,
+        "type": "checkbox",
+        "question": "What are two reasons to enable OSPF routing protocol authentication on a network? (Choose two.)",
+        "image": None,
+        "options": [
+            "to prevent data traffic from being redirected and then discarded",
+            "to ensure faster network convergence",
+            "to provide data security through encryption",
+            "to prevent redirection of data traffic to an insecure link",
+            "to ensure more efficient routing"
+        ],
+        "correct": [0, 3],
+        "explanation": "The reason to configure OSPF authentication is to mitigate against routing protocol attacks like redirection of data traffic to an insecure link, and redirection of data traffic to discard it. OSPF authentication does not provide faster network convergence, more efficient routing, or encryption of data traffic."
+    },
+    {
+        "id": 1098,
+        "type": "checkbox",
+        "question": "Which three functions are provided by the syslog logging service? (Choose three.)",
+        "image": None,
+        "options": [
+            "gathering logging information",
+            "authenticating and encrypting data sent over the network",
+            "retaining captured messages on the router when a router is rebooted",
+            "specifying where captured information is stored",
+            "distinguishing between information to be captured and information to be ignored",
+            "setting the size of the logging buffer"
+        ],
+        "correct": [0, 3, 4],
+        "explanation": "Syslog operations include gathering information, selecting which type of information to capture, and directing the captured information to a storage location. The logging service stores messages in a logging buffer that is time-limited, and cannot retain the information when a router is rebooted. Syslog does not authenticate or encrypt messages."
+    },
+    {
+        "id": 1099,
+        "type": "checkbox",
+        "question": "What two ICMPv6 message types must be permitted through IPv6 access control lists to allow resolution of Layer 3 addresses to Layer 2 MAC addresses? (Choose two.)",
+        "image": None,
+        "options": [
+            "neighbor solicitations",
+            "echo requests",
+            "neighbor advertisements",
+            "echo replies",
+            "router solicitations",
+            "router advertisements"
+        ],
+        "correct": [0, 2],
+        "explanation": "Neighbor solicitations and neighbor advertisements are ICMPv6 message types used for address resolution (similar to ARP in IPv4) and must be permitted through IPv6 ACLs."
+    },
+    {
+        "id": 1100,
+        "type": "checkbox",
+        "question": "Which three services are provided through digital signatures? (Choose three.)",
+        "image": None,
+        "options": [
+            "accounting",
+            "authenticity",
+            "compression",
+            "nonrepudiation",
+            "integrity",
+            "encryption"
+        ],
+        "correct": [1, 3, 4],
+        "explanation": "Digital signatures use a mathematical technique to provide three basic security services: Integrity, Authenticity, Nonrepudiation."
+    },
+    {
+        "id": 1101,
+        "type": "radio",
+        "question": "A technician is to document the current configurations of all network devices in a college, including those in off-site buildings. Which protocol would be best to use to securely access the network devices?",
+        "image": None,
+        "options": [
+            "FTP",
+            "HTTP",
+            "SSH",
+            "Telnet"
+        ],
+        "correct": [2],
+        "explanation": "Telnet sends passwords and other information in clear text, while SSH encrypts its data. FTP and HTTP do not provide remote device access for configuration purposes."
+    },
+    {
+        "id": 1102,
+        "type": "checkbox",
+        "question": "An administrator is trying to develop a BYOD security policy for employees that are bringing a wide range of devices to connect to the company network. Which three objectives must the BYOD security policy address? (Choose three.)",
+        "image": None,
+        "options": [
+            "All devices must be insured against liability if used to compromise the corporate network.",
+            "All devices must have open authentication with the corporate network.",
+            "Rights and activities permitted on the corporate network must be defined.",
+            "Safeguards must be put in place for any personal device being compromised.",
+            "The level of access of employees when connecting to the corporate network must be defined.",
+            "All devices should be allowed to attach to the corporate network flawlessly."
+        ],
+        "correct": [2, 3, 4],
+        "explanation": "A BYOD security policy should define the rights and activities permitted on the corporate network, put safeguards in place for compromised devices, and define the level of access for employees connecting to the network."
+    },
+    {
+        "id": 1103,
+        "type": "radio",
+        "question": "What is the function of the pass action on a Cisco IOS Zone-Based Policy Firewall?",
+        "image": None,
+        "options": [
+            "logging of rejected or dropped packets",
+            "inspecting traffic between zones for traffic control",
+            "tracking the state of connections between zones",
+            "forwarding traffic from one zone to another"
+        ],
+        "correct": [3],
+        "explanation": "The pass action performed by Cisco IOS ZPF permits forwarding of traffic in a manner similar to the permit statement in an access control list."
+    },
+    {
+        "id": 1104,
+        "type": "radio",
+        "question": "Refer to the exhibit. Based on the security levels of the interfaces on ASA1, what traffic will be allowed on the interfaces?",
+        "image": "/static/images/1104.png",
+        "options": [
+            "Traffic from the Internet and DMZ can access the LAN.",
+            "Traffic from the Internet and LAN can access the DMZ.",
+            "Traffic from the Internet can access both the DMZ and the LAN.",
+            "Traffic from the LAN and DMZ can access the Internet."
+        ],
+        "correct": [3],
+        "explanation": "ASA devices have security levels assigned to each interface that are not part of a configured ACL. These security levels allow traffic from more secure interfaces, such as security level 100, to access less secure interfaces, such as level 0. By default, they allow traffic from more secure interfaces (higher security level) to access less secure interfaces (lower security level). Traffic from the less secure interfaces is blocked from accessing more secure interfaces."
+    },
+    {
+        "id": 1105,
+        "type": "radio",
+        "question": "What network testing tool can be used to identify network layer protocols running on a host?",
+        "image": None,
+        "options": [
+            "SIEM",
+            "Nmap",
+            "L0phtcrack",
+            "Tripwire"
+        ],
+        "correct": [1],
+        "explanation": "Nmap is a network scanning tool that can identify network layer protocols and services running on hosts."
+    },
+    {
+        "id": 1106,
+        "type": "radio",
+        "question": "In the implementation of security on multiple devices, how do ASA ACLs differ from Cisco IOS ACLs?",
+        "image": None,
+        "options": [
+            "Cisco IOS routers utilize both named and numbered ACLs and Cisco ASA devices utilize only numbered ACLs.",
+            "Cisco IOS ACLs are configured with a wildcard mask and Cisco ASA ACLs are configured with a subnet mask.",
+            "Cisco IOS ACLs are processed sequentially from the top down and Cisco ASA ACLs are not processed sequentially.",
+            "Cisco IOS ACLs utilize an implicit deny all and Cisco ASA ACLs end with an implicit permit all."
+        ],
+        "correct": [1],
+        "explanation": "The Cisco IOS ACLs are configured with a wildcard mask and the Cisco ASA ACLs are configured with a subnet mask. Both devices use an implicit deny, top down sequential processing, and named or numbered ACLs."
+    },
+    {
+        "id": 1107,
+        "type": "radio",
+        "question": "Which statement describes an important characteristic of a site-to-site VPN?",
+        "image": None,
+        "options": [
+            "It must be statically set up.",
+            "It is ideally suited for use by mobile workers.",
+            "It requires using a VPN client on the host PC.",
+            "After the initial connection is established, it can dynamically change connection information.",
+            "It is commonly implemented over dialup and cable modem networks."
+        ],
+        "correct": [0],
+        "explanation": "A site-to-site VPN is created between the network devices of two separate networks. The VPN is static and stays established. The internal hosts of the two networks have no knowledge of the VPN."
+    },
+    {
+        "id": 1108,
+        "type": "checkbox",
+        "question": "Which two options are security best practices that help mitigate BYOD risks? (Choose two.)",
+        "image": None,
+        "options": [
+            "Use paint that reflects wireless signals and glass that prevents the signals from going outside the building.",
+            "Keep the device OS and software updated.",
+            "Only allow devices that have been approved by the corporate IT team.",
+            "Only turn on Wi-Fi when using the wireless network.",
+            "Decrease the wireless antenna gain level.",
+            "Use wireless MAC address filtering."
+        ],
+        "correct": [1, 3],
+        "explanation": "Many companies now support employees and visitors attaching and using wireless devices that connect to and use the corporate wireless network. This practice is known as a bring-your-own-device policy or BYOD. Commonly, BYOD security practices are included in the security policy..BYOD security best practices include:\n- Use unique passwords for each device and account.\n- Turn off Wi-Fi and Bluetooth connectivity when not being used. Only connect to trusted networks.\n- Keep the device OS and other software updated.\n- Backup any data stored on the device.\n- Subscribe to a device locator service with a remote wipe feature.\n- Provide antivirus software for approved BYODs.\n- Use Mobile Device Management (MDM) software."
+    },
+    {
+        "id": 1109,
+        "type": "radio",
+        "question": "Refer to the exhibit. A network administrator configures AAA authentication on R1. Which statement describes the effect of the keyword single-connection in the configuration?",
+        "image": "/static/images/1109.jpg",
+        "options": [
+            "R1 will open a separate connection to the TACACS+ server for each user authentication session.",
+            "The authentication performance is enhanced by keeping the connection to the TACACS+ server open.",
+            "The TACACS+ server only accepts one successful try for a user to authenticate with it.",
+            "R1 will open a separate connection to the TACACS server on a per source IP address basis for each authentication session."
+        ],
+        "correct": [1],
+        "explanation": "The single-connection keyword enhances TCP performance with TACACS+ by maintaining a single TCP connection for the life of the session. Without the single-connection keyword, a TCP connection is opened and closed per session."
+    },
+    {
+        "id": 1110,
+        "type": "radio",
+        "question": "A recently created ACL is not working as expected. The admin determined that the ACL had been applied inbound on the interface and that was the incorrect direction. How should the admin fix this issue?(SOSPECHOSO)",
+        "image": None,
+        "options": [
+            "Delete the original ACL and create a new ACL, applying it outbound on the interface.",
+            "Add an association of the ACL outbound on the same interface.",
+            "Fix the ACE statements so that it works as desired inbound on the interface.",
+            "Remove the inbound association of the ACL on the interface and reapply it outbound."
+        ],
+        "correct": [3],
+        "explanation": "To fix the ACL direction issue, remove the inbound association and reapply the ACL outbound on the interface.(TAMBIEN PUEDE SER LA OPCION 1: Delete the original ACL and create a new ACL, applying it outbound on the interface.)"
+    },
+    {
+        "id": 1111,
+        "type": "radio",
+        "question": "What characteristic of the Snort term-based subscriptions is true for both the community and the subscriber rule sets?",
+        "image": None,
+        "options": [
+            "Both have a 30-day delayed access to updated signatures.",
+            "Both use Cisco Talos to provide coverage in advance of exploits.",
+            "Both are fully supported by Cisco and include Cisco customer support.",
+            "Both offer threat protection against security threats."
+        ],
+        "correct": [3],
+        "explanation": "There are two types of term-based subscriptions:\n\n- Community Rule Set – Available for free, this subscription offers limited coverage against threats. The community rule set focuses on reactive response to security threats versus proactive research work. There is also a 30-day delayed access to updated signatures. No Cisco customer support available.\n\n- Subscriber Rule Set – Available for a fee, this service provides the best protection against threats. It includes coverage of advance exploits by using the research work of the Cisco Talos security experts. Fully supported by Cisco."
+    },
+    {
+        "id": 1112,
+        "type": "radio",
+        "question": "A security analyst is configuring Snort IPS. The analyst has just downloaded and installed the Snort OVA file. What is the next step?",
+        "image": None,
+        "options": [
+            "Verify Snort IPS.",
+            "Configure Virtual Port Group interfaces.",
+            "Enable IPS globally or on desired interfaces.",
+            "Activate the virtual services."
+        ],
+        "correct": [1],
+        "explanation": "To deploy Snort IPS on supported devices, perform the following steps:\n1. Download the Snort OVA file.\n2. Install the OVA file.\n3. Configure Virtual Port Group interfaces.\n4. Activate the virtual services.\n5. Configure Snort specifics.\n6. Enable IPS globally or on desired interfaces.\n7. Verify Snort IPS."
+    },
+    {
+        "id": 1113,
+        "type": "radio",
+        "question": "The security policy in a company specifies that employee workstations can initiate HTTP and HTTPS connections to outside websites and the return traffic is allowed. However, connections initiated from outside hosts are not allowed. Which parameter can be used in extended ACLs to meet this requirement?",
+        "image": None,
+        "options": [
+            "dscp",
+            "precedence",
+            "eq",
+            "established"
+        ],
+        "correct": [3],
+        "explanation": "The established keyword in extended ACLs allows return traffic for TCP connections that were initiated from inside the network."
+    },
+    {
+        "id": 1114,
+        "type": "checkbox",
+        "question": "A researcher is comparing the differences between a stateless firewall and a proxy firewall. Which two additional layers of the OSI model are inspected by a proxy firewall? (Choose two.)",
+        "image": None,
+        "options": [
+            "Layer 3",
+            "Layer 4",
+            "Layer 5",
+            "Layer 6",
+            "Layer 7"
+        ],
+        "correct": [2, 4],
+        "explanation": "Packet filtering firewalls are usually part of a router firewall, which permits or denies traffic based on Layer 3 and Layer 4 information. An application gateway firewall (proxy firewall) filters information at Layers 3, 4, 5, and 7 of the OSI reference model."
+    },
+    {
+        "id": 1115,
+        "type": "radio",
+        "question": "Refer to the exhibit. A network administrator is configuring a VPN between routers R1 and R2. Which commands would correctly configure a pre-shared key for the two routers?",
+        "image": "/static/images/1115.jpg",
+        "options": [
+            "R1(config)# username R2 password 5tayout!\nR2(config)# username R1 password 5tayout!",
+            "R1(config)# crypto isakmp key 5tayout! address 64.100.0.2\nR2(config)# crypto isakmp key 5tayout! address 64.100.0.1",
+            "R1(config)# crypto isakmp key 5tayout! hostname R1\nR2(config)# crypto isakmp key 5tayout! hostname R2",
+            "R1(config-if)# ppp pap sent-username R1 password 5tayout!\nR2(config-if)# ppp pap sent-username R2 password 5tayout!"
+        ],
+        "correct": [1],
+        "explanation": "The crypto isakmp key command is used to configure a pre-shared key for IKE authentication. The key must be the same on both routers, and each router must reference the other router's IP address."
+    },
+    {
+        "id": 1116,
+        "type": "radio",
+        "question": "Refer to the exhibit. Which statement is true about the effect of this Cisco IOS zone-based policy firewall configuration?",
+        "image": "/static/images/1116.jpg",
+        "options": [
+            "The firewall will automatically drop all HTTP, HTTPS, and FTP traffic.",
+            "The firewall will automatically allow HTTP, HTTPS, and FTP traffic from s0/0/0 to g0/0 and will track the connections. Tracking the connection allows only return traffic to be permitted through the firewall in the opposite direction.",
+            "The firewall will automatically allow HTTP, HTTPS, and FTP traffic from s0/0/0 to g0/0, but will not track the state of connections. A corresponding policy must be applied to allow return traffic to be permitted through the firewall in the opposite direction.",
+            "The firewall will automatically allow HTTP, HTTPS, and FTP traffic from g0/0 to s0/0/0 and will track the connections. Tracking the connection allows only return traffic to be permitted through the firewall in the opposite direction.",
+            "Return traffic to be permitted through the firewall in the opposite direction.",
+            "The firewall will automatically allow HTTP, HTTPS, and FTP traffic from g0/0 to s0/0/0, but will not track the state of connections. A corresponding policy must be applied to allow return traffic to be permitted through the firewall in the opposite direction."
+        ],
+        "correct": [5],
+        "explanation": "The pass action allows traffic but does not track the state of connections. Because the policy uses 'pass' instead of 'inspect', return traffic is not automatically allowed and a corresponding policy must be applied in the opposite direction."
+    },
+    {
+        "id": 1117,
+        "type": "radio",
+        "question": "Which privilege level has the most access to the Cisco IOS?",
+        "image": None,
+        "options": [
+            "level 0",
+            "level 15",
+            "level 7",
+            "level 16",
+            "level 1"
+        ],
+        "correct": [1],
+        "explanation": "Privilege level 15 has the most access to the Cisco IOS. Level 0 has limited commands, Level 1 is user EXEC mode, and Level 15 is privileged EXEC mode with full access."
+    },
+    {
+        "id": 1118,
+        "type": "radio",
+        "question": "Refer to the exhibit. A network administrator has configured NAT on an ASA device. What type of NAT is used?",
+        "image": "/static/images/1118.jpg",
+        "options": [
+            "inside NAT",
+            "static NAT",
+            "bidirectional NAT",
+            "outside NAT"
+        ],
+        "correct": [0],
+        "explanation": "NAT can be deployed on an ASA using one of these methods:\n- inside NAT – when a host from a higher-security interface has traffic destined for a lower-security interface and the ASA translates the internal host address to a global address\n- outside NAT – when traffic from a lower-security interface destined for a host on the higher-security interface is translated\n- bidirectional NAT – when both inside NAT and outside NAT are used together\n\nBecause the nat command is applied so that the inside interface is mapped to the outside interface, the NAT type is inside. Also, the dynamic keyword in the nat command indicates that it is a dynamic mapping."
+    },
+    {
+        "id": 1119,
+        "type": "radio",
+        "question": "A network analyst is configuring a site-to-site IPsec VPN. The analyst has configured both the ISAKMP and IPsec policies. What is the next step?",
+        "image": None,
+        "options": [
+            "Configure the hash as SHA and the authentication as pre-shared.",
+            "Apply the crypto map to the appropriate outbound interfaces.",
+            "Issue the show crypto ipsec sa command to verify the tunnel.",
+            "Verify that the security feature is enabled in the IOS."
+        ],
+        "correct": [1],
+        "explanation": "After configuring ISAKMP and IPsec policies, the next step is to apply the crypto map to the outbound interface."
+    },
+    {
+        "id": 1120,
+        "type": "radio",
+        "question": "When an inbound Internet-traffic ACL is being implemented, what should be included to prevent the spoofing of internal networks?",
+        "image": None,
+        "options": [
+            "ACEs to prevent traffic from private address spaces",
+            "ACEs to prevent broadcast address traffic",
+            "ACEs to prevent ICMP traffic",
+            "ACEs to prevent HTTP traffic",
+            "ACEs to prevent SNMP traffic"
+        ],
+        "correct": [0],
+        "explanation": "Common ACEs to assist with antispoofing include blocking packets that have a source address in the 127.0.0.0/8 range, any private address, or any multicast addresses. Furthermore, the administrator should not allow any outbound packets with a source address other than a valid address that is used in the internal networks of the organization."
+    },
 ]
