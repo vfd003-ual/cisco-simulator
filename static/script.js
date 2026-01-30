@@ -7,6 +7,20 @@ let currentQuestion = null;
 let userAnswer = null;
 let selectedLeftIndex = null;
 
+// Colores para matching (evitando azul que está en uso para selección)
+const matchingColors = [
+    '#4CAF50', // Verde
+    '#9C27B0', // Morado
+    '#FF9800', // Naranja
+    '#E91E63', // Rosa
+    '#009688', // Teal
+    '#795548', // Marrón
+    '#607D8B', // Gris azulado
+    '#F44336', // Rojo
+    '#00BCD4', // Cyan
+    '#8BC34A'  // Verde claro
+];
+
 // Inicializar
 function initQuiz() {
     fetch('/quiz_info')
@@ -148,6 +162,10 @@ function renderMatching(question, container) {
 
     // Inicializar userAnswer como objeto vacío
     userAnswer = {};
+    
+    // Objeto para rastrear qué color tiene cada concepto de la izquierda
+    const leftColorMap = {};
+    let nextColorIndex = 0;
 
     // Columna izquierda
     const leftDiv = document.createElement('div');
@@ -157,7 +175,7 @@ function renderMatching(question, container) {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'matching-item';
         itemDiv.textContent = item;
-        itemDiv.dataset.leftIndex = index; // Guardar índice
+        itemDiv.dataset.leftIndex = index;
         itemDiv.addEventListener('click', () => {
             document.querySelectorAll('.matching-item').forEach(el => el.classList.remove('selected'));
             itemDiv.classList.add('selected');
@@ -175,7 +193,7 @@ function renderMatching(question, container) {
         const itemDiv = document.createElement('div');
         itemDiv.className = 'matching-right-item';
         itemDiv.innerHTML = item;
-        itemDiv.dataset.rightIndex = index; // Guardar índice
+        itemDiv.dataset.rightIndex = index;
         
         // Enlazar directamente al hacer clic en el recuadro
         itemDiv.addEventListener('click', () => {
@@ -190,18 +208,51 @@ function renderMatching(question, container) {
                 const previousRightItem = document.querySelector(`.matching-right-item[data-right-index="${previousRightIndex}"]`);
                 if (previousRightItem) {
                     previousRightItem.classList.remove('matched');
+                    previousRightItem.style.backgroundColor = '';
+                    previousRightItem.style.borderColor = '';
+                    previousRightItem.style.color = '';
                 }
             }
+            
+            // Verificar si otra definición está usando el color del concepto actual
+            // y si hay otro concepto que tenía esta definición, quitarle el color
+            const existingLeftForThisRight = Object.entries(userAnswer).find(([leftIdx, rightIdx]) => rightIdx === index);
+            if (existingLeftForThisRight) {
+                const existingLeftIdx = parseInt(existingLeftForThisRight[0]);
+                // Quitar color del concepto izquierdo anterior
+                const existingLeftItem = document.querySelector(`.matching-item[data-left-index="${existingLeftIdx}"]`);
+                if (existingLeftItem) {
+                    existingLeftItem.style.backgroundColor = '';
+                    existingLeftItem.style.color = '';
+                }
+                // Eliminar el emparejamiento anterior
+                delete userAnswer[existingLeftIdx];
+                // Liberar el color
+                delete leftColorMap[existingLeftIdx];
+            }
+            
+            // Asignar color al concepto si no tiene uno
+            if (leftColorMap[selectedLeftIndex] === undefined) {
+                leftColorMap[selectedLeftIndex] = nextColorIndex % matchingColors.length;
+                nextColorIndex++;
+            }
+            
+            const assignedColor = matchingColors[leftColorMap[selectedLeftIndex]];
             
             // Guardar el emparejamiento
             userAnswer[selectedLeftIndex] = index;
             console.log('Matching answer:', userAnswer);
-            itemDiv.classList.add('matched');
             
-            // Mostrar indicador visual en el concepto
+            // Aplicar color a la definición
+            itemDiv.classList.add('matched');
+            itemDiv.style.backgroundColor = assignedColor;
+            itemDiv.style.borderColor = assignedColor;
+            itemDiv.style.color = 'white';
+            
+            // Aplicar el mismo color al concepto de la izquierda
             const leftItem = document.querySelector(`.matching-item[data-left-index="${selectedLeftIndex}"]`);
             if (leftItem) {
-                leftItem.style.backgroundColor = '#4CAF50';
+                leftItem.style.backgroundColor = assignedColor;
                 leftItem.style.color = 'white';
             }
             
@@ -230,17 +281,24 @@ function restoreAnswer(type, savedAnswer) {
         userAnswer = savedAnswer;
     } else if (type === 'matching') {
         userAnswer = savedAnswer;
-        // Marcar los emparejamientos restaurados
+        // Marcar los emparejamientos restaurados con colores diferentes
+        let colorIndex = 0;
         Object.entries(savedAnswer).forEach(([leftIdx, rightIdx]) => {
-            const rightItems = document.querySelectorAll('.matching-right-item');
-            if (rightItems[rightIdx]) {
-                rightItems[rightIdx].classList.add('matched');
+            const color = matchingColors[colorIndex % matchingColors.length];
+            colorIndex++;
+            
+            const rightItem = document.querySelector(`.matching-right-item[data-right-index="${rightIdx}"]`);
+            if (rightItem) {
+                rightItem.classList.add('matched');
+                rightItem.style.backgroundColor = color;
+                rightItem.style.borderColor = color;
+                rightItem.style.color = 'white';
             }
             
-            // Marcar el concepto de izquierda también
+            // Marcar el concepto de izquierda también con el mismo color
             const leftItem = document.querySelector(`.matching-item[data-left-index="${leftIdx}"]`);
             if (leftItem) {
-                leftItem.style.backgroundColor = '#4CAF50';
+                leftItem.style.backgroundColor = color;
                 leftItem.style.color = 'white';
             }
         });
