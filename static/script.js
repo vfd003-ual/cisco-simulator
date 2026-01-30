@@ -396,7 +396,10 @@ function showFeedback(question, isCorrect = null) {
         feedbackContainer.className = isCorrect ? 'feedback correct' : 'feedback incorrect';
         feedbackText.textContent = isCorrect ? '✅ Correcto' : '❌ Incorrecto';
     }
-    explanationText.textContent = question.explanation || '';
+    
+    // Convertir \n a <br> para mostrar saltos de línea
+    const explanation = question.explanation || '';
+    explanationText.innerHTML = explanation.replace(/\n/g, '<br>');
 }
 
 function exitQuiz() {
