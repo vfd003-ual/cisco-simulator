@@ -183,6 +183,16 @@ function renderMatching(question, container) {
                 alert('Selecciona un concepto primero');
                 return;
             }
+            
+            // Si este concepto ya tenía una definición asignada, desmarcarla
+            const previousRightIndex = userAnswer[selectedLeftIndex];
+            if (previousRightIndex !== undefined) {
+                const previousRightItem = document.querySelector(`.matching-right-item[data-right-index="${previousRightIndex}"]`);
+                if (previousRightItem) {
+                    previousRightItem.classList.remove('matched');
+                }
+            }
+            
             // Guardar el emparejamiento
             userAnswer[selectedLeftIndex] = index;
             console.log('Matching answer:', userAnswer);
