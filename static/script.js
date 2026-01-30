@@ -84,18 +84,18 @@ function renderQuestion(question) {
 
 function renderRadio(question, container) {
     const div = document.createElement('div');
-    div.className = 'radio-option';
+    div.className = 'checkbox-group'; // Usar mismo contenedor que checkbox
     question.options.forEach((option, index) => {
         const label = document.createElement('label');
-        label.style.display = 'block';
-        label.style.marginBottom = '0.5rem';
-        label.style.cursor = 'pointer';
+        label.className = 'checkbox-item'; // Usar mismo estilo que checkbox
         label.innerHTML = `
-            <input type="radio" name="option" value="${index}" style="margin-right: 0.5rem;">
-            ${option}
+            <input type="radio" name="option" value="${index}">
+            <span>${option}</span>
         `;
-        label.addEventListener('click', () => {
+        const radio = label.querySelector('input');
+        radio.addEventListener('change', () => {
             userAnswer = index;
+            console.log('Radio answer:', userAnswer);
         });
         div.appendChild(label);
     });

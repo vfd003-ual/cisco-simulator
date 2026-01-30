@@ -306,7 +306,8 @@ h1 {
     background-color: #f8f9fa;
 }
 
-.checkbox-item input[type="checkbox"] {
+.checkbox-item input[type="checkbox"],
+.checkbox-item input[type="radio"] {
     margin-right: 0.75rem;
     width: 18px;
     height: 18px;
