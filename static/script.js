@@ -140,7 +140,7 @@ function renderMatching(question, container) {
     instruction.style.fontStyle = 'italic';
     instruction.style.color = '#666';
     instruction.style.marginBottom = '1rem';
-    instruction.textContent = '(Haz clic en un concepto de la izquierda, luego en "Enlazar" junto a su definición correcta en la derecha)';
+    instruction.textContent = '(Haz clic en un concepto de la izquierda, luego en su definición correcta en la derecha)';
     container.appendChild(instruction);
     
     const div = document.createElement('div');
@@ -177,17 +177,15 @@ function renderMatching(question, container) {
         itemDiv.innerHTML = item;
         itemDiv.dataset.rightIndex = index; // Guardar índice
         
-        const enlazarBtn = document.createElement('button');
-        enlazarBtn.className = 'enlazar-btn';
-        enlazarBtn.textContent = 'Enlazar';
-        enlazarBtn.addEventListener('click', () => {
+        // Enlazar directamente al hacer clic en el recuadro
+        itemDiv.addEventListener('click', () => {
             if (selectedLeftIndex === null) {
                 alert('Selecciona un concepto primero');
                 return;
             }
             // Guardar el emparejamiento
             userAnswer[selectedLeftIndex] = index;
-            console.log('Matching answer:', userAnswer); // Debug
+            console.log('Matching answer:', userAnswer);
             itemDiv.classList.add('matched');
             
             // Mostrar indicador visual en el concepto
@@ -200,7 +198,7 @@ function renderMatching(question, container) {
             document.querySelectorAll('.matching-item').forEach(el => el.classList.remove('selected'));
             selectedLeftIndex = null;
         });
-        itemDiv.appendChild(enlazarBtn);
+        
         rightDiv.appendChild(itemDiv);
     });
     div.appendChild(rightDiv);
