@@ -11,14 +11,14 @@ let selectedLeftIndex = null;
 const matchingColors = [
     '#4CAF50', // Verde
     '#9C27B0', // Morado
-    '#FF9800', // Naranja
-    '#E91E63', // Rosa
-    '#009688', // Teal
-    '#795548', // Marrón
-    '#607D8B', // Gris azulado
     '#F44336', // Rojo
+    '#009688', // Teal
+    '#FF9800', // Naranja
+    '#8BC34A', // Verde claro
     '#00BCD4', // Cyan
-    '#8BC34A'  // Verde claro
+    '#607D8B', // Gris azulado
+    '#E91E63', // Rosa
+    '#795548' // Marrón
 ];
 
 // Inicializar
@@ -163,10 +163,6 @@ function renderMatching(question, container) {
     // Inicializar userAnswer como objeto vacío
     userAnswer = {};
     
-    // Objeto para rastrear qué color tiene cada concepto de la izquierda
-    const leftColorMap = {};
-    let nextColorIndex = 0;
-
     // Columna izquierda
     const leftDiv = document.createElement('div');
     leftDiv.className = 'matching-column';
@@ -214,8 +210,7 @@ function renderMatching(question, container) {
                 }
             }
             
-            // Verificar si otra definición está usando el color del concepto actual
-            // y si hay otro concepto que tenía esta definición, quitarle el color
+            // Verificar si otro concepto tenía esta definición, quitarle el color
             const existingLeftForThisRight = Object.entries(userAnswer).find(([leftIdx, rightIdx]) => rightIdx === index);
             if (existingLeftForThisRight) {
                 const existingLeftIdx = parseInt(existingLeftForThisRight[0]);
@@ -227,17 +222,10 @@ function renderMatching(question, container) {
                 }
                 // Eliminar el emparejamiento anterior
                 delete userAnswer[existingLeftIdx];
-                // Liberar el color
-                delete leftColorMap[existingLeftIdx];
             }
             
-            // Asignar color al concepto si no tiene uno
-            if (leftColorMap[selectedLeftIndex] === undefined) {
-                leftColorMap[selectedLeftIndex] = nextColorIndex % matchingColors.length;
-                nextColorIndex++;
-            }
-            
-            const assignedColor = matchingColors[leftColorMap[selectedLeftIndex]];
+            // Color fijo basado en el índice del concepto de la izquierda
+            const assignedColor = matchingColors[selectedLeftIndex % matchingColors.length];
             
             // Guardar el emparejamiento
             userAnswer[selectedLeftIndex] = index;
@@ -281,11 +269,10 @@ function restoreAnswer(type, savedAnswer) {
         userAnswer = savedAnswer;
     } else if (type === 'matching') {
         userAnswer = savedAnswer;
-        // Marcar los emparejamientos restaurados con colores diferentes
-        let colorIndex = 0;
+        // Marcar los emparejamientos restaurados con colores fijos basados en el índice izquierdo
         Object.entries(savedAnswer).forEach(([leftIdx, rightIdx]) => {
-            const color = matchingColors[colorIndex % matchingColors.length];
-            colorIndex++;
+            // Color fijo basado en el índice del concepto de la izquierda
+            const color = matchingColors[parseInt(leftIdx) % matchingColors.length];
             
             const rightItem = document.querySelector(`.matching-right-item[data-right-index="${rightIdx}"]`);
             if (rightItem) {
