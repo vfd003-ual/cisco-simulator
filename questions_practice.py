@@ -454,7 +454,7 @@ questions_practice = [
             "filters traffic based on defined rules as well as connection context"
         ],
         "correct": [0, 1, 2, 3],
-        "explanation": "Each network security device type has specific characteristics. Packet filter firewalls enforce access control based on packet content. IPS systems use signatures to detect attack patterns. Application gateways filter traffic at Layer 7."
+        "explanation": "Each network security device type has specific characteristics. Packet filter firewalls enforce access control based on packet content. IPS systems use signatures to detect attack patterns. Application gateways filter traffic at Layer 7. Stateful firewalls filter traffic based on rules and connection context."
     },
     {
         "id": 34,
